@@ -14,20 +14,21 @@ function MyApp({ Component, pageProps }) {
                   <Image
                     src="/taptap.svg"
                     alt="TapTap logo"
-                    layout="fill"
-                    objectFit="contain"
+                    width="112.5px"
+                    height="33.3px"
                   />
+                  开发者服务
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>TDS 博客</a>
+                <a>团队博客</a>
               </Link>
             </li>
 
             <li>
-              <Link href="/work-here">
+              <Link href="/open">
                 <a>开放资源</a>
               </Link>
             </li>

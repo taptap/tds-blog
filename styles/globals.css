@@ -19,15 +19,24 @@ a {
   box-sizing: border-box;
 }
 
-.posts h1 {
-  font-size: 2.4rem;
-  font-weight: light;
-  line-height: 3.2rem;
+h1 {
+  font-size: 3.2rem;
+  line-height: 4.2rem;
 }
 
 h2 {
-  font-size: 1.8rem;
-  line-height: 2.4rem;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
 }
 
 a {
@@ -39,8 +48,7 @@ a:visited {
 }
 
 header {
-  margin-bottom: 1.5rem;
-  height: 3.2rem;
+  height: 4.2rem;
 }
 
 header nav {
@@ -48,15 +56,17 @@ header nav {
   padding: 0 2rem;
 }
 
-header nav .logo {
-  display: inline-block;
-  position: relative;
-  height: 2.4rem;
-  width: 10rem;
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2.6rem;
+  font-weight: 300;
 }
 
 header ul {
   display: flex;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -77,52 +87,22 @@ header li + li {
 header a,
 header a:visited {
   color: #4b4b4b;
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 3.2rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 main {
   margin: 0 auto;
   max-width: 80rem;
   padding: 0 2rem 4rem;
-}
-
-.post {
-  font-size: 1.4rem;
-}
-
-.post > div {
-  align-items: center;
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.post > div:last-of-type {
-  display: block;
-}
-
-.post > div img {
-  border-radius: 50%;
-}
-
-.post > div > div {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
 }
 
 .post time {
   color: #8e8e8e;
   display: block;
-  font-size: 1rem;
-}
-
-.post p {
-  line-height: 2.1rem;
-  margin: 0;
+  font-size: 1.2rem;
 }
 
 .post p + p {
