@@ -22,13 +22,13 @@ function MyApp({ Component, pageProps }) {
             </li>
             <li>
               <Link href="/">
-                <a>TDS Blog</a>
+                <a>TDS 博客</a>
               </Link>
             </li>
 
             <li>
               <Link href="/work-here">
-                <a>Work@TDS</a>
+                <a>开放资源</a>
               </Link>
             </li>
           </ul>

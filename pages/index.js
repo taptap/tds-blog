@@ -28,7 +28,7 @@ export default function Posts({ posts }) {
             </div>
 
             <Link href={post.permalink}>
-              <a>Read more →</a>
+              <a>阅读全文 →</a>
             </Link>
           </article>
         );
