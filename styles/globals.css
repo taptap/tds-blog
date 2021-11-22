@@ -2,8 +2,11 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-size: 10px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #ffffff;
+  color: #4b4b4b;
 }
 
 a {
@@ -13,4 +16,151 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  line-height: 2.25rem;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 0 0 0.25rem;
+}
+
+a {
+  color: #15c5ce;
+}
+
+a:visited {
+  color: #00abb6;
+}
+
+header {
+  margin-bottom: 1.5rem;
+  height: 3.2rem;
+}
+
+header nav {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header nav .logo {
+  display: inline-block;
+  position: relative;
+  height: 3.2rem;
+  width: 8rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li + li {
+  margin-left: 1.25rem;
+}
+
+header a,
+header a:visited {
+  color: #15c5ce;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 0 2rem 4rem;
+}
+
+.post {
+  font-size: 1.4rem;
+}
+
+.post > div {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.post > div:last-of-type {
+  display: block;
+}
+
+.post > div img {
+  border-radius: 50%;
+}
+
+.post > div > div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.post time {
+  color: #8e8e8e;
+  display: block;
+  font-size: 1rem;
+}
+
+.post p {
+  line-height: 2.1rem;
+  margin: 0;
+}
+
+.post p + p {
+  margin-top: 1.25rem;
+}
+
+.posts {
+}
+
+.posts > article {
+}
+
+.posts > article > div {
+  align-items: center;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.posts > article > div img {
+  border-radius: 50%;
+}
+
+.posts > article > div > div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.posts > article > div > div > strong {
+  font-size: 0.75rem;
+  font-weight: medium;
+  margin-bottom: 0.125rem;
+}
+
+.posts > article > h2 {
+  margin-bottom: 0.125rem;
+}
+
+.posts > article > p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.posts > article + article {
+  margin-top: 3rem;
 }
