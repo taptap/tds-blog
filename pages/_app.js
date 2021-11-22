@@ -7,29 +7,31 @@ function MyApp({ Component, pageProps }) {
     <>
       <header>
         <nav>
+          <Link href="https://developer.taptap.com">
+            <a className="logo">
+              <Image
+                src="/taptap.svg"
+                alt="TapTap logo"
+                width="112.5px"
+                height="33.3px"
+              />
+              开发者服务
+            </a>
+          </Link>
           <ul>
-            <li>
-              <Link href="http://taptap.com">
-                <a className="logo">
-                  <Image
-                    src="/taptap.svg"
-                    alt="TapTap logo"
-                    width="112.5px"
-                    height="33.3px"
-                  />
-                  开发者服务
-                </a>
-              </Link>
-            </li>
             <li>
               <Link href="/">
                 <a>团队博客</a>
               </Link>
             </li>
-
             <li>
               <Link href="/open">
                 <a>开放资源</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://career.taptap.dev">
+                <a>加入我们</a>
               </Link>
             </li>
           </ul>
