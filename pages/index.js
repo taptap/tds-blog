@@ -12,7 +12,7 @@ export default function Posts({ posts }) {
         const prettyDate = new Date(post.createdAt).toLocaleDateString("zh-CN");
 
         return (
-          <article key={post.slug}>
+          <article className="post" key={post.slug}>
             <h2>
               <Link href={post.permalink}>
                 <a>{post.title}</a>
