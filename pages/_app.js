@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import "../styles/globals.css";
@@ -5,6 +6,9 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>TapTap 开发者服务博客</title>
+      </Head>
       <header>
         <nav>
           <Link href="https://developer.taptap.com">

@@ -11,7 +11,7 @@ export default function OpenResources({ pages }) {
     <div>
       <h1>开放资源</h1>
 
-      <h2>工作文化</h2>
+      <h2>在 TDS 工作</h2>
 
       <ul className={style.pageList}>
         {culturePages.map((page) => {

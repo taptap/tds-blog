@@ -1,5 +1,5 @@
 ---
-title: 在 TDS 工作
+title: 文化、制度、工具
 category: culture
 ---
 
