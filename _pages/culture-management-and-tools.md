@@ -1,5 +1,5 @@
 ---
-title: 文化、制度、工具
+title: 文化、制度和工具
 category: culture
 ---
 
