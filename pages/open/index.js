@@ -7,6 +7,7 @@ import style from "../../styles/open.module.scss";
 export default function OpenResources({ pages }) {
   const culturePages = pages.filter((page) => page.category === "culture");
   const projectPages = pages.filter((page) => page.category === "project");
+  const guidePages = pages.filter((page) => page.category === "guide");
   return (
     <div>
       <h1>开放资源</h1>
@@ -15,6 +16,22 @@ export default function OpenResources({ pages }) {
 
       <ul className={style.pageList}>
         {culturePages.map((page) => {
+          return (
+            <li key={page.slug}>
+              <Link href={page.permalink}>
+                <a>{page.title}</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+
+      <h2>指南文档</h2>
+      <p>
+        这是一些我们内部使用的指南性文档，在这里开放出来以期对其他人也有参考价值。
+      </p>
+      <ul className={style.pageList}>
+        {guidePages.map((page) => {
           return (
             <li key={page.slug}>
               <Link href={page.permalink}>
