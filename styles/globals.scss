@@ -1,3 +1,6 @@
+$h1-top-margin: 10rem;
+$h1-line-height: 4.2rem;
+
 html,
 body {
   padding: 0;
@@ -21,8 +24,8 @@ a {
 
 h1 {
   font-size: 3.2rem;
-  line-height: 4.2rem;
-  margin-top: 10rem;
+  line-height: $h1-line-height;
+  margin-top: $h1-top-margin;
 }
 
 h2 {
@@ -92,12 +95,21 @@ header a:visited {
   font-weight: 400;
 }
 
-main {
+.mainContainer {
+  max-width: 100rem;
   margin: 0 auto;
-  max-width: 80rem;
   padding: 0 2rem 4rem;
+  display: flex;
+  .ourLinks {
+    padding-top: $h1-top-margin + $h1-line-height;
+    padding-left: 1rem;
+  }
+}
+
+main {
   font-size: 1.6rem;
   line-height: 2.6rem;
+  flex-grow: 1;
 }
 
 .post time {
@@ -110,14 +122,9 @@ main {
   margin-top: 1.25rem;
 }
 
-.posts > article + article {
-  margin-top: 3rem;
-}
-
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 0.25rem 1rem;
   padding: 0.25rem 1rem;
-  quotes: "\201C""\201D""\2018""\2019";
 }
