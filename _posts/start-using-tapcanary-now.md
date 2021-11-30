@@ -1,7 +1,7 @@
 ---
 title: "TapCanary 正式上线，可以用起来了兄弟萌！"
 excerpt: "让开发者能可靠进行小规模游戏内测的工具 TapCanary 正式上线并投入使用了。"
-createdAt: "2021-11-15"
+date: "2021-11-15"
 author: yuanzhipeng
 ---
 
