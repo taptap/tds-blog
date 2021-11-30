@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { getAllPosts } from "../lib/api";
+import style from "../styles/PostList.module.scss";
 
 export default function Posts({ posts }) {
   return (
-    <div className="posts">
+    <div className={style.posts}>
       <h1>TDS 博客</h1>
 
       {posts.map((post) => {

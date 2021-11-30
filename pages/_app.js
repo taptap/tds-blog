@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import "../styles/globals.css";
+import "../styles/globals.scss";
+import FollowUs from "../components/FollowUs";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -41,9 +42,14 @@ function MyApp({ Component, pageProps }) {
           </ul>
         </nav>
       </header>
-      <main>
-        <Component {...pageProps} />
-      </main>
+      <div className="mainContainer">
+        <main>
+          <Component {...pageProps} />
+        </main>
+        <div className="ourLinks">
+          <FollowUs />
+        </div>
+      </div>
     </>
   );
 }

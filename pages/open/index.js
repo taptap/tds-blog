@@ -5,9 +5,11 @@ import { getAllPages } from "../../lib/api";
 import style from "../../styles/open.module.scss";
 
 export default function OpenResources({ pages }) {
+  pages.sort((first, second) => (first.slug > second.slug ? 1 : -1));
   const culturePages = pages.filter((page) => page.category === "culture");
   const projectPages = pages.filter((page) => page.category === "project");
   const guidePages = pages.filter((page) => page.category === "guide");
+  const talkPages = pages.filter((page) => page.category === "talk");
   return (
     <div>
       <h1>开放资源</h1>
@@ -45,6 +47,19 @@ export default function OpenResources({ pages }) {
       <h2>开源项目</h2>
       <ul className={style.pageList}>
         {projectPages.map((page) => {
+          return (
+            <li key={page.slug}>
+              <Link href={page.url}>
+                <a>{page.title}</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+
+      <h2>讲座视频</h2>
+      <ul className={style.pageList}>
+        {talkPages.map((page) => {
           return (
             <li key={page.slug}>
               <Link href={page.url}>
