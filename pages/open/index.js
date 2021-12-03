@@ -75,7 +75,7 @@ export default function Open({ pages }) {
                 <ul className={styles.small}>
                   {projectPages.map((page) => (
                     <li key={page.slug}>
-                      <a href={page.url} target="_blank">
+                      <a href={page.url} target="_blank" rel="noreferrer">
                         <h3>{page.title}</h3>
                       </a>
                     </li>
@@ -91,7 +91,7 @@ export default function Open({ pages }) {
                 <ul className={styles.small}>
                   {talkPages.map((page) => (
                     <li key={page.slug}>
-                      <a href={page.url} target="_blank">
+                      <a href={page.url} target="_blank" rel="noreferrer">
                         <h3>{page.title}</h3>
                       </a>
                     </li>

@@ -14,7 +14,11 @@ export default function Header({ children }) {
         <nav className={styles.nav}>
           <div className={styles.stage}>
             <div className={styles.navContent}>
-              <a href="https://developer.taptap.com" target="_blank">
+              <a
+                href="https://developer.taptap.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className={styles.logo}>
                   <img src="/taptap.svg" alt="TapTap logo" />
                   <div className={styles.divider} />
@@ -44,7 +48,11 @@ export default function Header({ children }) {
                       </Link>
                     </li>
                     <li>
-                      <a href="https://career.taptap.dev" target="_blank">
+                      <a
+                        href="https://career.taptap.dev"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         加入我们
                       </a>
                     </li>

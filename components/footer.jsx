@@ -14,17 +14,29 @@ export default function Footer() {
               <div className={styles.list}>
                 <ul className={styles.small}>
                   <li>
-                    <a href="https://taptap.com" target="_blank">
+                    <a
+                      href="https://taptap.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <h3>TapTap 中国大陆版</h3>
                     </a>
                   </li>
                   <li>
-                    <a href="https://taptap.io" target="_blank">
+                    <a
+                      href="https://taptap.io"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <h3>TapTap 国际版</h3>
                     </a>
                   </li>
                   <li>
-                    <a href="https://developer.taptap.com" target="_blank">
+                    <a
+                      href="https://developer.taptap.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <h3>开发者中心</h3>
                     </a>
                   </li>
