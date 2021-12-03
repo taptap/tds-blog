@@ -1,0 +1,87 @@
+@import "common.scss";
+
+.heroContent {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 0 0 2rem 0;
+  color: #fff;
+
+  time {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.5rem;
+  }
+}
+
+.main {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  .content {
+    line-height: 1.8;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 500;
+    }
+
+    a {
+      text-decoration: underline;
+      text-decoration-color: rgba(21, 197, 206, 0.4);
+      text-decoration-thickness: 0.15rem;
+      text-underline-offset: 0.1rem;
+      color: rgba(21, 197, 206, 1);
+      font-weight: 500;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    blockquote {
+      background-color: rgba(21, 197, 206, 0.06);
+      margin: 0;
+      padding: 0.5rem 2rem;
+      box-shadow: 0.2rem 0 0 0 inset rgba(21, 197, 206, 1);
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  .heroContent {
+    padding: 0 0 3rem 0;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .main {
+    padding: 3rem 0;
+  }
+}
+
+@media (min-width: 72rem) {
+  .heroContent {
+    padding: 0 0 4rem 0;
+  }
+
+  .main {
+    padding: 4rem 0;
+  }
+}

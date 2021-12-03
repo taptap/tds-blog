@@ -1,23 +1,31 @@
-import Image from "next/image";
-import Link from "next/link";
+import Header from "../../components/header";
 
 import { getAllPosts, getPostBySlug } from "../../lib/api";
+import styles from "../../styles/post.module.scss";
 
 export default function Post({ post }) {
-  const prettyDate = new Date(post.createdAt).toLocaleDateString("zh-CN");
+  const prettyDate = new Date(post.date).toLocaleDateString("zh-CN");
 
   return (
-    <div className="post">
-      <h1>{post.title}</h1>
+    <>
+      <Header>
+        <div className={styles.heroContent}>
+          <p>
+            <time dateTime={post.date}>{prettyDate}</time>
+          </p>
 
-      <div>
-        <div>
-          <time dateTime={post.createdAt}>{prettyDate}</time>
+          <h1>{post.title}</h1>
         </div>
-      </div>
+      </Header>
 
-      <div dangerouslySetInnerHTML={{ __html: post.body }} />
-    </div>
+      <div className={styles.stage}>
+        <main className={styles.main}>
+          <div className={styles.content}>
+            <div dangerouslySetInnerHTML={{ __html: post.body }} />
+          </div>
+        </main>
+      </div>
+    </>
   );
 }
 

@@ -1,40 +1,54 @@
-import Image from "next/image";
 import Link from "next/link";
+import Header from "../components/header";
 
 import { getAllPosts } from "../lib/api";
-import style from "../styles/PostList.module.scss";
+import styles from "../styles/posts.module.scss";
 
 export default function Posts({ posts }) {
   return (
-    <div className={style.posts}>
-      <h1>TDS 博客</h1>
+    <>
+      <Header>
+        <div className={styles.heroContent}>
+          <h1>团队博客</h1>
+          <div className={styles.picture}>
+            <img
+              src="/photos/3.jpg"
+              alt="TapTap 办公楼的楼梯。有个人正在上楼。"
+            />
+          </div>
+        </div>
+      </Header>
 
-      {posts.map((post) => {
-        const prettyDate = new Date(post.date).toLocaleDateString("zh-CN");
+      <div className={styles.stage}>
+        <main className={styles.main}>
+          <div className={styles.grid}>
+            <section>
+              <h2>最近更新</h2>
 
-        return (
-          <article className="post" key={post.slug}>
-            <h2>
-              <Link href={post.permalink}>
-                <a>{post.title}</a>
-              </Link>
-            </h2>
+              <div className={`${styles.list} ${styles.large}`}>
+                {posts.map((post) => {
+                  const prettyDate = new Date(post.date).toLocaleDateString(
+                    "zh-CN"
+                  );
 
-            <p>{post.excerpt}</p>
-
-            <div>
-              <div>
-                <time dateTime={post.date}>{prettyDate}</time>
+                  return (
+                    <Link href={post.permalink} key={post.slug}>
+                      <a>
+                        <article className={styles.small}>
+                          <h3>{post.title}</h3>
+                          <p>{post.excerpt}</p>
+                          <time dateTime={post.date}>{prettyDate}</time>
+                        </article>
+                      </a>
+                    </Link>
+                  );
+                })}
               </div>
-            </div>
-
-            <Link href={post.permalink}>
-              <a>阅读全文 →</a>
-            </Link>
-          </article>
-        );
-      })}
-    </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </>
   );
 }
 
