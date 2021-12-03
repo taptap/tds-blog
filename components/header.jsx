@@ -14,17 +14,15 @@ export default function Header({ children }) {
         <nav className={styles.nav}>
           <div className={styles.stage}>
             <div className={styles.navContent}>
-              <a
-                href="https://developer.taptap.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className={styles.logo}>
-                  <img src="/taptap.svg" alt="TapTap logo" />
-                  <div className={styles.divider} />
-                  <span>开发者服务</span>
-                </div>
-              </a>
+              <Link href="/">
+                <a>
+                  <div className={styles.logo}>
+                    <img src="/taptap.svg" alt="TapTap logo" />
+                    <div className={styles.divider} />
+                    <span>开发者服务博客</span>
+                  </div>
+                </a>
+              </Link>
 
               <div className={`${styles.menu} ${menuOpen ? styles.open : ""}`}>
                 <button className={styles.menuToggle} onClick={openMenu}>
@@ -37,11 +35,6 @@ export default function Header({ children }) {
                   </button>
 
                   <ul>
-                    <li>
-                      <Link href="/">
-                        <a>团队博客</a>
-                      </Link>
-                    </li>
                     <li>
                       <Link href="/open">
                         <a>开放资源</a>
