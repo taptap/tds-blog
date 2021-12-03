@@ -10,7 +10,7 @@ export default function Posts({ posts }) {
       <h1>TDS 博客</h1>
 
       {posts.map((post) => {
-        const prettyDate = new Date(post.createdAt).toLocaleDateString("zh-CN");
+        const prettyDate = new Date(post.date).toLocaleDateString("zh-CN");
 
         return (
           <article className="post" key={post.slug}>
@@ -24,7 +24,7 @@ export default function Posts({ posts }) {
 
             <div>
               <div>
-                <time dateTime={post.createdAt}>{prettyDate}</time>
+                <time dateTime={post.date}>{prettyDate}</time>
               </div>
             </div>
 
