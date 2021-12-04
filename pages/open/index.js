@@ -1,18 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import Header from "../../components/header";
 
+import Header from "../../components/header";
+import { getTalks } from "../../lib/talks";
 import { getAllPages } from "../../lib/api";
 import styles from "../../styles/posts.module.scss";
 import heroImage from "../../public/photos/1.jpg";
 
-export default function Open({ pages }) {
+export default function Open({ pages, talks }) {
   pages.sort((first, second) => (first.slug > second.slug ? 1 : -1));
 
   const culturePages = pages.filter((page) => page.category === "culture");
   const guidePages = pages.filter((page) => page.category === "guide");
   const projectPages = pages.filter((page) => page.category === "project");
-  const talkPages = pages.filter((page) => page.category === "talk");
 
   return (
     <>
@@ -93,12 +93,16 @@ export default function Open({ pages }) {
             <section>
               <h2>讲座视频</h2>
 
-              <div className={styles.list}>
+              <div className={`${styles.list} ${styles.small}`}>
+                <p>
+                  以下是心动和 TapTap
+                  同事做的内部分享，在征得讲师同意后公开出来，希望对更多人产生价值。
+                </p>
                 <ul className={styles.small}>
-                  {talkPages.map((page) => (
-                    <li key={page.slug}>
-                      <a href={page.url} target="_blank" rel="noreferrer">
-                        <h3>{page.title}</h3>
+                  {talks.map((t) => (
+                    <li key={t.url}>
+                      <a href={t.url} target="_blank" rel="noreferrer">
+                        <h3>{t.title}</h3>
                       </a>
                     </li>
                   ))}
@@ -116,6 +120,7 @@ export function getStaticProps() {
   return {
     props: {
       pages: getAllPages(),
+      talks: getTalks(),
     },
   };
 }

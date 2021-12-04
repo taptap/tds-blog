@@ -19,7 +19,8 @@
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.0.1",
     "sass": "^1.43.4",
-    "unified": "^10.1.1"
+    "unified": "^10.1.1",
+    "yaml": "2.0.0-9"
   },
   "devDependencies": {
     "eslint": "7.32.0",
