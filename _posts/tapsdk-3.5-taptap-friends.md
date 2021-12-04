@@ -35,7 +35,7 @@ author: weikailing
 ### 申请方法
 
 请通过工单联系我们，申请开通此功能。
-接入文档可参考：https://developer.taptap.com/docs/sdk/friends/guide/。
+接入文档可参考：https://developer.taptap.com/docs/sdk/friends/guide/ 。
 
 ## 其他更新
 
