@@ -15,13 +15,16 @@ export default function Header({ children }) {
 
   return (
     <header className={styles.header}>
-      <Image
-        className={styles.background}
-        src={headerBackground}
-        alt="TapTap 办公楼首层的大厅。"
-        layout="fill"
-        objectFit="cover"
-      />
+      <div className={styles.background}>
+        <div className={styles.image}>
+          <Image
+            src={headerBackground}
+            alt="TapTap 办公楼首层的大厅。"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      </div>
 
       <div className={styles.container}>
         <nav className={styles.nav}>
