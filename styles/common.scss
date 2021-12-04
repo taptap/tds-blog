@@ -1,0 +1,89 @@
+.stage {
+  width: 100%;
+  max-width: 84rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.large {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.small {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grid {
+  @extend .large;
+  line-height: 1.8;
+
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    .list {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        h3 {
+          display: inline-block;
+          font-weight: 500;
+          font-size: 1.5rem;
+          text-decoration: underline;
+          text-decoration-color: rgba(21, 197, 206, 0.4);
+          text-decoration-thickness: 0.15rem;
+          text-underline-offset: 0.1rem;
+        }
+
+        &:hover,
+        &:focus {
+          h3 {
+            text-decoration: none;
+          }
+        }
+
+        time {
+          color: rgba($color: #212121, $alpha: 0.3);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  .stage {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .grid section {
+    flex-direction: row;
+
+    h2 {
+      flex-basis: 16rem;
+      flex-shrink: 0;
+    }
+  }
+}

@@ -15,7 +15,7 @@ TapTap Developer Services 是 TapTap 服务于开发者的业务部门，大部�
 
 一般情况下在两轮面试后我们能做出决定，如果双方认为互相匹配，HR 同事会启动正式发 offer 和入职的流程。
 
-如果你对在 TapTap 工作感兴趣，可以在<a href="https://career.taptap.dev">这个页面</a>找到开放的职位。如果你希望对我们的技术职位面试过程了解更多，可以看[技术面试指南](/pages/tech-interview-guide)。
+如果你对在 TapTap 工作感兴趣，可以在[这个页面](https://career.taptap.dev)找到开放的职位。如果你希望对我们的技术职位面试过程了解更多，可以看[技术面试指南](/pages/tech-interview-guide)。
 
 ## 部分制度
 
