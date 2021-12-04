@@ -6,6 +6,7 @@ import styles from "../styles/header.module.scss";
 import logoSVG from "../public/taptap.svg";
 import menuIcon from "../public/icons/menu.svg";
 import closeIcon from "../public/icons/close.svg";
+import headerBackground from "../public/photos/2.jpg";
 
 export default function Header({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +15,14 @@ export default function Header({ children }) {
 
   return (
     <header className={styles.header}>
+      <Image
+        className={styles.background}
+        src={headerBackground}
+        alt="TapTap 办公楼首层的大厅。"
+        layout="fill"
+        objectFit="cover"
+      />
+
       <div className={styles.container}>
         <nav className={styles.nav}>
           <div className={styles.stage}>
@@ -21,11 +30,14 @@ export default function Header({ children }) {
               <Link href="/">
                 <a>
                   <div className={styles.logo}>
-                    <Image
-                      className={styles.image}
-                      src={logoSVG}
-                      alt="TapTap logo"
-                    />
+                    <div className={styles.image}>
+                      <Image
+                        src={logoSVG}
+                        alt="TapTap logo"
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
                     <div className={styles.divider} />
                     <span>开发者服务博客</span>
                   </div>
@@ -34,12 +46,22 @@ export default function Header({ children }) {
 
               <div className={`${styles.menu} ${menuOpen ? styles.open : ""}`}>
                 <button className={styles.menuToggle} onClick={openMenu}>
-                  <Image src={menuIcon} alt="Open menu" />
+                  <Image
+                    src={menuIcon}
+                    alt="Open menu"
+                    layout="fill"
+                    objectFit="contain"
+                  />
                 </button>
 
                 <div className={styles.menuList} onClick={closeMenu}>
                   <button className={styles.menuToggle}>
-                    <Image src={closeIcon} alt="Close menu" />
+                    <Image
+                      src={closeIcon}
+                      alt="Close menu"
+                      layout="fill"
+                      objectFit="contain"
+                    />
                   </button>
 
                   <ul>
