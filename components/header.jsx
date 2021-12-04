@@ -1,7 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 import styles from "../styles/header.module.scss";
+import logoSVG from "../public/taptap.svg";
+import menuIcon from "../public/icons/menu.svg";
+import closeIcon from "../public/icons/close.svg";
 
 export default function Header({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +21,11 @@ export default function Header({ children }) {
               <Link href="/">
                 <a>
                   <div className={styles.logo}>
-                    <img src="/taptap.svg" alt="TapTap logo" />
+                    <Image
+                      className={styles.image}
+                      src={logoSVG}
+                      alt="TapTap logo"
+                    />
                     <div className={styles.divider} />
                     <span>开发者服务博客</span>
                   </div>
@@ -26,12 +34,12 @@ export default function Header({ children }) {
 
               <div className={`${styles.menu} ${menuOpen ? styles.open : ""}`}>
                 <button className={styles.menuToggle} onClick={openMenu}>
-                  <img src="/icons/menu.svg" alt="Open menu" />
+                  <Image src={menuIcon} alt="Open menu" />
                 </button>
 
                 <div className={styles.menuList} onClick={closeMenu}>
                   <button className={styles.menuToggle}>
-                    <img src="/icons/close.svg" alt="Close menu" />
+                    <Image src={closeIcon} alt="Close menu" />
                   </button>
 
                   <ul>

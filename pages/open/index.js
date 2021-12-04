@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import Header from "../../components/header";
 
 import { getAllPages } from "../../lib/api";
 import styles from "../../styles/posts.module.scss";
+import heroImage from "../../public/photos/1.jpg";
 
 export default function Open({ pages }) {
   pages.sort((first, second) => (first.slug > second.slug ? 1 : -1));
@@ -18,10 +20,14 @@ export default function Open({ pages }) {
         <div className={styles.heroContent}>
           <h1>开放资源</h1>
           <div className={styles.picture}>
-            <img
-              src="/photos/1.jpg"
-              alt="TapTap 办公楼的公共区域。有个人正坐在椅子上使用电脑，还有两个人从旁边走过。"
-            />
+            <div className={styles.image}>
+              <Image
+                src={heroImage}
+                alt="TapTap 办公楼的公共区域。有个人正坐在椅子上使用电脑，还有两个人从旁边走过。"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           </div>
         </div>
       </Header>

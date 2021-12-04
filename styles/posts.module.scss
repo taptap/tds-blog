@@ -20,14 +20,17 @@
     position: relative;
     height: 100%;
 
-    img {
+    .image {
       position: absolute;
       width: 100%;
       height: calc(100% + 4rem);
       bottom: -5rem;
       border-radius: 1rem;
       box-shadow: 0 3rem 3rem -1.5rem rgba(0, 0, 0, 0.15);
-      object-fit: cover;
+    }
+
+    img {
+      border-radius: 1rem;
     }
   }
 }

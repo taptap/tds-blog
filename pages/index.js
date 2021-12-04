@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import Header from "../components/header";
 
 import { getAllPosts } from "../lib/api";
 import styles from "../styles/posts.module.scss";
+import heroImage from "../public/photos/3.jpg";
 
 export default function Posts({ posts }) {
   return (
@@ -11,10 +13,14 @@ export default function Posts({ posts }) {
         <div className={styles.heroContent}>
           <h1>团队博客</h1>
           <div className={styles.picture}>
-            <img
-              src="/photos/3.jpg"
-              alt="TapTap 办公楼的楼梯。有个人正在上楼。"
-            />
+            <div className={styles.image}>
+              <Image
+                src={heroImage}
+                alt="TapTap 办公楼的楼梯。有个人正在上楼。"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           </div>
         </div>
       </Header>
