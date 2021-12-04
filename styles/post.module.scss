@@ -59,6 +59,24 @@
       padding: 0.5rem 2rem;
       box-shadow: 0.2rem 0 0 0 inset rgba(21, 197, 206, 1);
     }
+
+    table {
+      border-collapse: collapse;
+
+      td,
+      th {
+        padding: 0.4rem 1rem;
+        text-align: left;
+        vertical-align: top;
+        min-width: 5rem;
+      }
+
+      thead {
+        tr {
+          border-bottom: 2px solid rgba(21, 197, 206, 0.6);
+        }
+      }
+    }
   }
 }
 
