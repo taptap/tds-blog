@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../styles/footer.module.scss";
 
 export default function Footer() {
@@ -78,6 +79,22 @@ export default function Footer() {
                   <li>
                     <a href="/rss.xml">
                       <h3>RSS Feed</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <Link href="/open">
+                      <a>
+                        <h3>开放资源</h3>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      href="https://career.taptap.dev"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <h3>加入我们</h3>
                     </a>
                   </li>
                 </ul>
