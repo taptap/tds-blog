@@ -9,6 +9,7 @@ export default function Post({ post }) {
   return (
     <>
       <Head>
+        <title>{post.title} | TDS 博客</title>
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
