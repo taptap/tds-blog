@@ -42,6 +42,37 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
+              <div className={styles.list}>
+                <ul className={styles.small}>
+                  <li>
+                    <a
+                      href="https://twitter.com/taptap"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <h3>@TapTap</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://reddit.com/r/taptap"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <h3>r/TapTap</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://weibo.com/taptapgames"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <h3>TapTap 官方微博</h3>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </section>
           </div>
 
