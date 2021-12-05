@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Header from "../../components/header";
 
 import { getAllPages, getPageBySlug } from "../../lib/api";
@@ -6,6 +7,16 @@ import styles from "../../styles/post.module.scss";
 export default function Page({ page }) {
   return (
     <>
+      <Head>
+        <title>{page.title} | TDS 博客</title>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={page.title} />
+        <meta property="og:description" content="" />
+        <meta
+          property="og:image"
+          content="https://blog.taptap.dev/tap-icon.png"
+        />
+      </Head>
       <Header>
         <div className={styles.heroContent}>
           <h1>{page.title}</h1>
