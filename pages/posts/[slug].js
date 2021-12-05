@@ -1,5 +1,5 @@
+import Head from "next/head";
 import Header from "../../components/header";
-
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import styles from "../../styles/post.module.scss";
 
@@ -8,6 +8,16 @@ export default function Post({ post }) {
 
   return (
     <>
+      <Head>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta
+          property="og:image"
+          content="https://blog.taptap.dev/tap-icon.png"
+        />
+      </Head>
+
       <Header>
         <div className={styles.heroContent}>
           <p>
