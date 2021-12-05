@@ -1,5 +1,5 @@
 ---
-title: "TapSDK 3.5 版本更新，TapTap 好友功能上线"
+title: "TapSDK 3.5 版本更新，与 TapTap 好友集成"
 excerpt: "TapSDK 3.5 正式发布，好友模块新增与 TapTap 好友数据打通功能。"
 date: "2021-11-30"
 author: weikailing
