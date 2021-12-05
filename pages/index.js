@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "../components/header";
 
 import { getAllPosts } from "../lib/api";
+import { generateFeed } from "../lib/feed";
 import styles from "../styles/posts.module.scss";
 import heroImage from "../public/photos/3.jpg";
 
@@ -59,11 +60,11 @@ export default function Posts({ posts }) {
 }
 
 export function getStaticProps() {
+  const posts = getAllPosts();
+  generateFeed(posts);
   return {
     props: {
-      posts: getAllPosts().map((post) => ({
-        ...post,
-      })),
+      posts,
     },
   };
 }

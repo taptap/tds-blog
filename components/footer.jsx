@@ -73,6 +73,15 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
+              <div className={styles.list}>
+                <ul className={styles.small}>
+                  <li>
+                    <a href="/rss.xml">
+                      <h3>RSS Feed</h3>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </section>
           </div>
 

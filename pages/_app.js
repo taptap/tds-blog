@@ -8,6 +8,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>TapTap 开发者服务博客</title>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="订阅最新内容"
+          href="/rss.xml"
+        />
       </Head>
 
       <Component {...pageProps} />
