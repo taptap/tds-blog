@@ -10,8 +10,15 @@
     gap: 8rem;
     color: #fff;
 
-    .grid section a h3 {
-      text-decoration-color: rgba(255, 255, 255, 0.3);
+    .grid section .lists {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+
+      a h3 {
+        text-decoration-color: rgba(255, 255, 255, 0.3);
+      }
     }
 
     .copyright {
@@ -24,6 +31,14 @@
 @media (min-width: 48rem) {
   .footer .main {
     padding: 3rem 0;
+
+    .grid section .lists {
+      flex-direction: row;
+
+      .list {
+        flex-basis: 16rem;
+      }
+    }
   }
 }
 
