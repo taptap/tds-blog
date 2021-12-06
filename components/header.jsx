@@ -39,6 +39,7 @@ export default function Header({ children }) {
                         alt="TapTap logo"
                         layout="fill"
                         objectFit="contain"
+                        priority="true"
                       />
                     </div>
                     <div className={styles.divider} />
@@ -54,6 +55,7 @@ export default function Header({ children }) {
                     alt="Open menu"
                     layout="fill"
                     objectFit="contain"
+                    priority="true"
                   />
                 </button>
 
@@ -64,6 +66,7 @@ export default function Header({ children }) {
                       alt="Close menu"
                       layout="fill"
                       objectFit="contain"
+                      priority="true"
                     />
                   </button>
 
