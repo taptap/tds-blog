@@ -37,7 +37,7 @@ TapTap Developer Services 是 TapTap 服务于开发者的业务部门，大部�
 
 - 即时通讯：Slack
 - 电子邮件和日历：Google Workspace
-- 内部文档：公司范围使用 Confluence，TDS 内部开始在部分工作里使用 Notion。Confluence 上可以看到每个人的总结和分享，包括心动 CEO Dash 每天几乎不间断的工作日志。
+- 内部文档：公司范围使用 Confluence，TDS 内部开始在部分工作里使用 Notion。Confluence 上可以看到每个人的总结和分享，包括心动 CEO Dash 几乎每天不间断的工作日志以及 TapTap CEO Kros （理论上）每周都会写的 TapTap 周报。
 - 代码管理：GitLab（非开源项目）、GitHub（开源项目）
 
 公司在选择工具方面除了使用体验外主要考虑的是利于信息在公司内传播、积累、查询。在信息管理上鼓励对内公开透明，为每个人在工作中做出最佳决策提供充分的上下文。
