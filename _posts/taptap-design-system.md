@@ -31,9 +31,9 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 ![design system google trends](/post-images/trends.png)
 
-Google Trends 搜索"design system”显示结果
+Google Trends 搜索「design system」显示结果
 
-在 [Google Trends](https://trends.google.com/trends/explore?date=today 5-y&q="design system") 上快速搜索**「Design System」**显示，在过去几年里，人们对这个话题的兴趣一直在上升，尤其在中国，设计系统已经成为设计圈乃至互联网行业内的流行词，许多企业都在持续搭建设计系统，设计系统之所以变得如此流行，是因为它们不但可以提升用户体验，还可以减少设计负担和设计决策，提升效率，同时在行业内树立品牌知名度，传达设计价值观。
+在 [Google Trends](https://trends.google.com/trends/explore?date=today%205-y&q=%22design%20system%22) 上快速搜索 **「Design System」** 显示，在过去几年里，人们对这个话题的兴趣一直在上升，尤其在中国，设计系统已经成为设计圈乃至互联网行业内的流行词，许多企业都在持续搭建设计系统，设计系统之所以变得如此流行，是因为它们不但可以提升用户体验，还可以减少设计负担和设计决策，提升效率，同时在行业内树立品牌知名度，传达设计价值观。
 
 ### 3. 灵感开放
 
@@ -151,7 +151,7 @@ Interactive components
 
 高度定制的 TapTap 自有产品，在 TapTap 品牌规范下，企业系列产品均保持品牌视觉的一致性，交互细节的连贯性，有效提高多平台的研发效率。
 
-![TapTap 开发者中心](taptap-developer-center.png)
+![TapTap 开发者中心](/post-images/taptap-developer-center.png)
 
 #### TapDB 数据分析 [网址](https://www.tapdb.com/)
 
@@ -199,9 +199,7 @@ Figma 官方社区： [Figma Community](https://www.figma.com/community/design_s
 
 参与 TapTap Design System | Developers 建设的每一位设计师同学 ❤️
 
-
-
-![Figma 近期热门](trending.png)
+![Figma 近期热门](/post-images/trending.png)
 
 
 
