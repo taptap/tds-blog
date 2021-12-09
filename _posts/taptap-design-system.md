@@ -3,6 +3,7 @@ title: "从服务出发，打造生长、包容、全面的 TapTap 企业级设�
 excerpt: "基于游戏开发者平台领域，提炼出来的全面、易用的 UI 解决方案"
 date: "2021-12-09"
 author: YangYuXi
+image: "taptap-design-system.png"
 ---
 
 TapTap Design System｜Developers 是由 TapTap Design Team B 端设计团队（TDS UX Design），基于游戏开发者平台领域，提炼出来的全面、易用的 UI 解决方案。
@@ -28,7 +29,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 ### 2. 热度
 
-![img](https://confluence.xindong.com/download/attachments/576822402/%E5%BC%80%E6%BA%90%E4%BB%8B%E7%BB%8D%E6%96%87%E6%A1%A3.png?version=1&modificationDate=1636356208000&api=v2)
+![design system google trends](/post-images/trends.png)
 
 Google Trends 搜索"design system”显示结果
 
@@ -48,9 +49,7 @@ Google Trends 搜索"design system”显示结果
 
 没有完美的设计系统，体验者站在**不同的角度**向我们提出反馈，拓展更多的设计可能性，这都会使我们变得更好。
 
-
-
-![img](https://confluence.xindong.com/download/attachments/576822402/%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87.png?version=2&modificationDate=1636366932000&api=v2)
+![可持续性、可能性、多样性](/post-images/philosophy.png)
 
 我们的愿景
 
@@ -80,11 +79,9 @@ Google Trends 搜索"design system”显示结果
 
 通过小颗粒元素组合大颗粒元素的逐层嵌套，构成了我们现在组件库中的各个元素，覆盖了 38 种组件类型和 1000 多种组件状态。
 
-![img](https://confluence.xindong.com/download/attachments/576822402/iMac%20-%202.png?version=2&modificationDate=1638862752000&api=v2)
+![组件类型](/post-images/various-components.png)
 
-
-
-![img](https://confluence.xindong.com/download/attachments/576822402/%E6%96%87%E4%BB%B6.gif?version=1&modificationDate=1637919070000&api=v2)
+![组件概览](/post-images/overview.gif)
 
 
 
@@ -94,7 +91,7 @@ Google Trends 搜索"design system”显示结果
 
 
 
-![img](https://confluence.xindong.com/download/attachments/576822402/anli.gif?version=1&modificationDate=1636614693000&api=v2)
+![交互演示](/post-images/interactive-demo.gif)
 
 Interactive demo
 
@@ -108,7 +105,7 @@ Interactive demo
 
 
 
-![img](https://confluence.xindong.com/download/attachments/576822402/iMac%20-%2018.png?version=2&modificationDate=1636535641000&api=v2)
+![交互组件](/post-images/interactive-components.png)
 
 Interactive components
 
@@ -120,17 +117,17 @@ Interactive components
 
 1. **Duplicate** 「TapTap Design System｜Developers」 资源，并 **Publish** 为共享组件库
 
-    ![img](https://confluence.xindong.com/download/attachments/576822402/iMac%20-%2019.png?version=3&modificationDate=1638866845000&api=v2)
+    ![duplicate](/post-images/duplicate.png)
 
-2. 将 TapTap Design System｜Developers 组件库资源复制到你的**团队**项目中
+    将 TapTap Design System｜Developers 组件库资源复制到你的**团队**项目中
 
-    ![img](https://confluence.xindong.com/download/attachments/576822402/iMac%20-%2020.png?version=2&modificationDate=1636528672000&api=v2)
+    ![publish](/post-images/publish.png)
 
-3. 使用团队账号，发布为公共组件库
+    使用团队账号，发布为公共组件库
 
-4. 调用 UI 组件的时候，可在侧边的工具栏内，切换样式与变量
+2. 调用 UI 组件的时候，可在侧边的工具栏内，切换样式与变量
 
-    ![img](https://confluence.xindong.com/download/attachments/576822402/10.png?version=1&modificationDate=1636357888000&api=v2)
+    ![切换样式与变量](/post-images/variant.png)
 
     可在使用侧灵活切换实例/变量
 
@@ -154,7 +151,7 @@ Interactive components
 
 高度定制的 TapTap 自有产品，在 TapTap 品牌规范下，企业系列产品均保持品牌视觉的一致性，交互细节的连贯性，有效提高多平台的研发效率。
 
-![img](https://confluence.xindong.com/download/attachments/576822402/iMac%20-%2022.png?version=3&modificationDate=1636613918000&api=v2)
+![TapTap 开发者中心](taptap-developer-center.png)
 
 #### TapDB 数据分析 [网址](https://www.tapdb.com/)
 
@@ -166,15 +163,15 @@ Interactive components
 
 支持**设计师创造自定义主题**，我们开源了足够丰富的设计系统，设计师可以更改变量，在一定的规则下，自由创造主题，既能满足业务的特性，又能品牌多样化的视觉需求。
 
-![img](https://confluence.xindong.com/download/attachments/576822402/iMac%20-%2029.png?version=1&modificationDate=1636366545000&api=v2)
+![TapDB](/post-images/tapdb.png)
 
 ### 2. 百变主题案例
 
-使用 TapTap Design System｜Developers 灵活丰富的组件资源，可以快速配置出适合多种业务需求的个性化主题，助力您的产品提升体验一致性。
+使用 TapTap Design System｜Developers 灵活丰富的组件资源，可以快速配置出适合多种业务需求的个性化主题，助力你的产品提升体验一致性。
 
 
 
-![img](https://confluence.xindong.com/download/attachments/576822402/iMac%20-%2023.png?version=5&modificationDate=1638867957000&api=v2)
+![个性化主题](/post-images/theme.png)
 
 Templates
 
@@ -204,7 +201,7 @@ Figma 官方社区： [Figma Community](https://www.figma.com/community/design_s
 
 
 
-![img](https://confluence.xindong.com/download/attachments/576822402/iMac%20-%2048.png?version=1&modificationDate=1637918455000&api=v2)
+![Figma 近期热门](trending.png)
 
 
 
