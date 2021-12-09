@@ -16,8 +16,15 @@ export default function Post({ post }) {
         <meta property="og:description" content={post.excerpt} />
         <meta
           property="og:image"
-          content="https://blog.taptap.dev/tap-icon.png"
+          content={
+            postImage
+              ? `https://blog.taptap.dev/photos/${post.image}`
+              : "https://blog.taptap.dev/tap-icon.png"
+          }
         />
+        {postImage && (
+          <meta property="twitter:card" content="summary_large_image" />
+        )}
       </Head>
 
       <Header postImage={postImage}>
