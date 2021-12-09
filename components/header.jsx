@@ -8,7 +8,7 @@ import menuIcon from "../public/icons/menu.svg";
 import closeIcon from "../public/icons/close.svg";
 import headerBackground from "../public/photos/2.jpg";
 
-export default function Header({ children }) {
+export default function Header({ postImage, children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const openMenu = () => setMenuOpen(true);
   const closeMenu = () => setMenuOpen(false);
@@ -18,15 +18,15 @@ export default function Header({ children }) {
       <div className={styles.background}>
         <div className={styles.image}>
           <Image
-            src={headerBackground}
-            alt="TapTap 办公楼首层的大厅。"
+            src={postImage || headerBackground}
+            alt={postImage ? "" : "TapTap 办公楼首层的大厅。"}
             layout="fill"
             objectFit="cover"
           />
         </div>
       </div>
 
-      <div className={styles.container}>
+      <div className={`${styles.container} ${postImage ? styles.neutral : ""}`}>
         <nav className={styles.nav}>
           <div className={styles.stage}>
             <div className={styles.navContent}>

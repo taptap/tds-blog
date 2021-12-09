@@ -5,6 +5,7 @@ import styles from "../../styles/post.module.scss";
 
 export default function Post({ post }) {
   const prettyDate = new Date(post.date).toLocaleDateString("zh-CN");
+  const postImage = post.image && require(`../../public/photos/${post.image}`);
 
   return (
     <>
@@ -19,7 +20,7 @@ export default function Post({ post }) {
         />
       </Head>
 
-      <Header>
+      <Header postImage={postImage}>
         <div className={styles.heroContent}>
           <p>
             <time dateTime={post.date}>{prettyDate}</time>
