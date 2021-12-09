@@ -30,6 +30,10 @@
     background-color: rgba(21, 197, 206, 0.8);
     z-index: 0;
 
+    &.neutral {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
     .hero {
       flex-grow: 1;
     }

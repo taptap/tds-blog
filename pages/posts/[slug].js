@@ -5,6 +5,7 @@ import styles from "../../styles/post.module.scss";
 
 export default function Post({ post }) {
   const prettyDate = new Date(post.date).toLocaleDateString("zh-CN");
+  const postImage = post.image && require(`../../public/photos/${post.image}`);
 
   return (
     <>
@@ -15,11 +16,18 @@ export default function Post({ post }) {
         <meta property="og:description" content={post.excerpt} />
         <meta
           property="og:image"
-          content="https://blog.taptap.dev/tap-icon.png"
+          content={
+            postImage
+              ? `https://blog.taptap.dev/photos/${post.image}`
+              : "https://blog.taptap.dev/tap-icon.png"
+          }
         />
+        {postImage && (
+          <meta property="twitter:card" content="summary_large_image" />
+        )}
       </Head>
 
-      <Header>
+      <Header postImage={postImage}>
         <div className={styles.heroContent}>
           <p>
             <time dateTime={post.date}>{prettyDate}</time>
