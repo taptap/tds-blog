@@ -6,10 +6,10 @@ author: YangYuXi
 image: "taptap-design-system.png"
 ---
 
-TapTap Design System｜Developers 是由 TapTap Design Team B 端设计团队（TDS UX Design），基于游戏开发者平台领域，提炼出来的全面、易用的 UI 解决方案。
+TapTap Design System ｜ Developers 是由 TapTap Design Team B 端设计团队（TDS UX Design），基于游戏开发者平台领域，提炼出来的全面、易用的 UI 解决方案。
 经过多次对项目中不同业务场景的探索和积累，已逐步沉淀为一个丰富的、全面的、成熟的 UI 设计系统，为 TapTap 内外部各企业级业务提供设计支持。
 
-[TapTap Design System｜Developers ➡️](https://www.figma.com/community/file/1044528985624992085/TapTap-Design-System丨Developers)  （Figma Community）
+[TapTap Design System ｜ Developers ➡️](https://www.figma.com/community/file/1044528985624992085/TapTap-Design-System丨Developers) （Figma Community）
 
 ## 一、挑战启发灵感
 
@@ -57,8 +57,6 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 ## 二、支持快速搭建的 UI/UX 资产
 
-
-
 ### 1. 核心设计理念
 
 #### 包容业务
@@ -85,65 +83,45 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 ![组件概览](/post-images/overview.gif)
 
-
-
 #### 在线即可体验的交互效果
 
 我们为大部分组件展示了交互演示，可以帮助用户**更好的理解与使用组件**。
-
-
 
 <figure>
     <img alt="交互演示" src="/post-images/interactive-demo.gif">
     <figurecaption>Interactive demo</figurecaption>
 </figure>
 
-
-
-
-
 #### 支持快速搭建的交互原型组件
 
 我们提供了完整的交互组件，拥有可重复使用的交互元素，使用户能够更轻松地使用我们的设计系统构建可交互原型图，**减少原型制作时间**。
-
-
 
 <figure>
     <img alt="交互组件" src="/post-images/interactive-components.png">
     <figurecaption>Interactive components</figurecaption>
 </figure>
 
-
-
-
-
 ### 3. 如何开始
 
-1. **Duplicate** 「TapTap Design System｜Developers」 资源，并 **Publish** 为共享组件库
+1. **Duplicate** 「TapTap Design System ｜ Developers」 资源，并 **Publish** 为共享组件库
 
-    <figure>
-        <img alt="duplicate" src="/post-images/duplicate.png">
-        <figurecaption>将 TapTap Design System｜Developers 组件库资源复制到你的<strong>团队</strong>项目中</figurecaption>
-    </figure>
-    <figure>
-        <img alt="publish" src="/post-images/publish.png">
-        <figurecaption>使用团队账号，发布为公共组件库</figurecaption>
-    </figure>
+<figure>
+    <img alt="duplicate" src="/post-images/duplicate.png">
+    <figurecaption>将 TapTap Design System｜Developers 组件库资源复制到你的<strong>团队</strong>项目中</figurecaption>
+</figure>
+<figure>
+    <img alt="publish" src="/post-images/publish.png">
+    <figurecaption>使用团队账号，发布为公共组件库</figurecaption>
+</figure>
 
 2. 调用 UI 组件的时候，可在侧边的工具栏内，切换样式与变量
 
-    <figure>
-        <img alt="切换样式与变量" src="/post-images/variant.png">
-        <figurecaption>可在使用侧灵活切换实例/变量</figurecaption>
-    </figure>
-
-
-
-
+<figure>
+    <img alt="切换样式与变量" src="/post-images/variant.png">
+    <figurecaption>可在使用侧灵活切换实例/变量</figurecaption>
+</figure>
 
 ## 三、最佳实践
-
-
 
 ### 1. 项目实战
 
@@ -173,15 +151,12 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 ### 2. 百变主题案例
 
-使用 TapTap Design System｜Developers 灵活丰富的组件资源，可以快速配置出适合多种业务需求的个性化主题，助力你的产品提升体验一致性。
-
-
+使用 TapTap Design System ｜ Developers 灵活丰富的组件资源，可以快速配置出适合多种业务需求的个性化主题，助力你的产品提升体验一致性。
 
 <figure>
     <img alt="个性化主题" src="/post-images/theme.png">
     <figurecaption>Templates</figurecaption>
 </figure>
-
 
 ## 四、TapTap 企业级设计系统 Figma 开源地址
 
@@ -193,7 +168,7 @@ TapTap Design System | Developers 现已正式在 Figma 社区开放，欢迎各
 
 TapTap 官方主页： [TapTap Figma Community](https://www.figma.com/@taptap)
 
-TapTap 企业级设计系统官方地址：[TapTap Design System｜Developers](https://www.figma.com/community/file/1044528985624992085/TapTap-Design-System丨Developers)
+TapTap 企业级设计系统官方地址：[TapTap Design System ｜ Developers](https://www.figma.com/community/file/1044528985624992085/TapTap-Design-System丨Developers)
 
 也可以在社区首页 Explore 和顶部分类榜，近期热门里找到我们啦~
 
@@ -205,15 +180,9 @@ Figma 官方社区： [Figma Community](https://www.figma.com/community/design_s
 
 ![Figma 近期热门](/post-images/trending.png)
 
-
-
 ## 五、积极共建
 
-
-
 我们非常重视每一位用户的意见和建议，帮助我们未来做的更好，希望大家可以热情反馈，积极共建~
-
-
 
 ### 联系方式
 
