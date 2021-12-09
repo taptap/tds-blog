@@ -29,9 +29,10 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 ### 2. 热度
 
-![design system google trends](/post-images/trends.png)
-
-Google Trends 搜索「design system」显示结果
+<figure>
+    <img alt="design system google trends" src="/post-images/trends.png">
+    <figcaption>Google Trends 搜索 "design system" 显示结果</figcaption>
+</figure>
 
 在 [Google Trends](https://trends.google.com/trends/explore?date=today%205-y&q=%22design%20system%22) 上快速搜索 **「Design System」** 显示，在过去几年里，人们对这个话题的兴趣一直在上升，尤其在中国，设计系统已经成为设计圈乃至互联网行业内的流行词，许多企业都在持续搭建设计系统，设计系统之所以变得如此流行，是因为它们不但可以提升用户体验，还可以减少设计负担和设计决策，提升效率，同时在行业内树立品牌知名度，传达设计价值观。
 
@@ -49,9 +50,10 @@ Google Trends 搜索「design system」显示结果
 
 没有完美的设计系统，体验者站在**不同的角度**向我们提出反馈，拓展更多的设计可能性，这都会使我们变得更好。
 
-![可持续性、可能性、多样性](/post-images/philosophy.png)
-
-我们的愿景
+<figure>
+    <img alt="可持续性、可能性、多样性" src="/post-images/philosophy.png">
+    <figurecaption>我们的愿景</figurecaption>
+</figure>
 
 ## 二、支持快速搭建的 UI/UX 资产
 
@@ -91,9 +93,10 @@ Google Trends 搜索「design system」显示结果
 
 
 
-![交互演示](/post-images/interactive-demo.gif)
-
-Interactive demo
+<figure>
+    <img alt="交互演示" src="/post-images/interactive-demo.gif">
+    <figurecaption>Interactive demo</figurecaption>
+</figure>
 
 
 
@@ -105,9 +108,10 @@ Interactive demo
 
 
 
-![交互组件](/post-images/interactive-components.png)
-
-Interactive components
+<figure>
+    <img alt="交互组件" src="/post-images/interactive-components.png">
+    <figurecaption>Interactive components</figurecaption>
+</figure>
 
 
 
@@ -117,19 +121,21 @@ Interactive components
 
 1. **Duplicate** 「TapTap Design System｜Developers」 资源，并 **Publish** 为共享组件库
 
-    ![duplicate](/post-images/duplicate.png)
-
-    将 TapTap Design System｜Developers 组件库资源复制到你的**团队**项目中
-
-    ![publish](/post-images/publish.png)
-
-    使用团队账号，发布为公共组件库
+    <figure>
+        <img alt="duplicate" src="/post-images/duplicate.png">
+        <figurecaption>将 TapTap Design System｜Developers 组件库资源复制到你的<strong>团队</strong>项目中</figurecaption>
+    </figure>
+    <figure>
+        <img alt="publish" src="/post-images/publish.png">
+        <figurecaption>使用团队账号，发布为公共组件库</figurecaption>
+    </figure>
 
 2. 调用 UI 组件的时候，可在侧边的工具栏内，切换样式与变量
 
-    ![切换样式与变量](/post-images/variant.png)
-
-    可在使用侧灵活切换实例/变量
+    <figure>
+        <img alt="切换样式与变量" src="/post-images/variant.png">
+        <figurecaption>可在使用侧灵活切换实例/变量</figurecaption>
+    </figure>
 
 
 
@@ -171,12 +177,10 @@ Interactive components
 
 
 
-![个性化主题](/post-images/theme.png)
-
-Templates
-
-
-
+<figure>
+    <img alt="个性化主题" src="/post-images/theme.png">
+    <figurecaption>Templates</figurecaption>
+</figure>
 
 
 ## 四、TapTap 企业级设计系统 Figma 开源地址
