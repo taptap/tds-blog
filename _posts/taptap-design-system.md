@@ -52,7 +52,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 <figure>
     <img alt="可持续性、可能性、多样性" src="/post-images/philosophy.png">
-    <figurecaption>我们的愿景</figurecaption>
+    <figcaption>我们的愿景</figcaption>
 </figure>
 
 ## 二、支持快速搭建的 UI/UX 资产
@@ -80,7 +80,6 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 通过小颗粒元素组合大颗粒元素的逐层嵌套，构成了我们现在组件库中的各个元素，覆盖了 38 种组件类型和 1000 多种组件状态。
 
 ![组件类型](/post-images/various-components.png)
-
 ![组件概览](/post-images/overview.gif)
 
 #### 在线即可体验的交互效果
@@ -89,7 +88,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 <figure>
     <img alt="交互演示" src="/post-images/interactive-demo.gif">
-    <figurecaption>Interactive demo</figurecaption>
+    <figcaption>Interactive demo</figcaption>
 </figure>
 
 #### 支持快速搭建的交互原型组件
@@ -98,7 +97,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 <figure>
     <img alt="交互组件" src="/post-images/interactive-components.png">
-    <figurecaption>Interactive components</figurecaption>
+    <figcaption>Interactive components</figcaption>
 </figure>
 
 ### 3. 如何开始
@@ -107,18 +106,18 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 <figure>
     <img alt="duplicate" src="/post-images/duplicate.png">
-    <figurecaption>将 TapTap Design System｜Developers 组件库资源复制到你的<strong>团队</strong>项目中</figurecaption>
+    <figcaption>将 TapTap Design System｜Developers 组件库资源复制到你的<strong>团队</strong>项目中</figcaption>
 </figure>
 <figure>
     <img alt="publish" src="/post-images/publish.png">
-    <figurecaption>使用团队账号，发布为公共组件库</figurecaption>
+    <figcaption>使用团队账号，发布为公共组件库</figcaption>
 </figure>
 
 2. 调用 UI 组件的时候，可在侧边的工具栏内，切换样式与变量
 
 <figure>
     <img alt="切换样式与变量" src="/post-images/variant.png">
-    <figurecaption>可在使用侧灵活切换实例/变量</figurecaption>
+    <figcaption>可在使用侧灵活切换实例/变量</figcaption>
 </figure>
 
 ## 三、最佳实践
@@ -155,7 +154,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 <figure>
     <img alt="个性化主题" src="/post-images/theme.png">
-    <figurecaption>Templates</figurecaption>
+    <figcaption>Templates</figcaption>
 </figure>
 
 ## 四、TapTap 企业级设计系统 Figma 开源地址
