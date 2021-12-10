@@ -11,9 +11,9 @@ TapTap Design System ｜ Developers 是由 TapTap Design Team B 端设计团队�
 
 [TapTap Design System ｜ Developers ➡️](https://www.figma.com/community/file/1044528985624992085/TapTap-Design-System丨Developers) （Figma Community）
 
-## 一、挑战启发灵感
+## 挑战启发灵感
 
-### 1. 挑战
+### 挑战
 
 #### 业务变种多
 
@@ -27,7 +27,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 重复性的工作，会导致一部分的团队资源浪费，如果没有与上下游紧密咬合，将会产生不必要的沟通成本和额外的工作量，极大增加了不可控因素，从而导致项目周期延长。
 
-### 2. 热度
+### 热度
 
 <figure>
     <img alt="design system google trends" src="/post-images/trends.png">
@@ -36,7 +36,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 在 [Google Trends](https://trends.google.com/trends/explore?date=today%205-y&q=%22design%20system%22) 上快速搜索 **「Design System」** 显示，在过去几年里，人们对这个话题的兴趣一直在上升，尤其在中国，设计系统已经成为设计圈乃至互联网行业内的流行词，许多企业都在持续搭建设计系统，设计系统之所以变得如此流行，是因为它们不但可以提升用户体验，还可以减少设计负担和设计决策，提升效率，同时在行业内树立品牌知名度，传达设计价值观。
 
-### 3. 灵感开放
+### 灵感开放
 
 #### 可持续性
 
@@ -55,9 +55,9 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
     <figcaption>我们的愿景</figcaption>
 </figure>
 
-## 二、支持快速搭建的 UI/UX 资产
+## 支持快速搭建的 UI/UX 资产
 
-### 1. 核心设计理念
+### 核心设计理念
 
 #### 包容业务
 
@@ -71,7 +71,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 一致性是务实的目的，相似的元素以相同方式呈现，构成视觉一致性，在认知和使用上保持一致。通过高标准的一致的重复，降低用户反复学习的成本。
 
-### 2. 系统性的设计与交互组件
+### 系统性的设计与交互组件
 
 #### 丰富的原子级组件
 
@@ -100,7 +100,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
     <figcaption>Interactive components</figcaption>
 </figure>
 
-### 3. 如何开始
+### 如何开始
 
 1. **Duplicate** 「TapTap Design System ｜ Developers」 资源，并 **Publish** 为共享组件库
 
@@ -120,9 +120,9 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
     <figcaption>可在使用侧灵活切换实例/变量</figcaption>
 </figure>
 
-## 三、最佳实践
+## 最佳实践
 
-### 1. 项目实战
+### 项目实战
 
 #### TapTap 开发者中心 [网址](https://developer.taptap.com/)
 
@@ -148,7 +148,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
 
 ![TapDB](/post-images/tapdb.png)
 
-### 2. 百变主题案例
+### 百变主题案例
 
 使用 TapTap Design System ｜ Developers 灵活丰富的组件资源，可以快速配置出适合多种业务需求的个性化主题，助力你的产品提升体验一致性。
 
@@ -157,7 +157,7 @@ B 端产品通常有更长的产品周期且多平台合作，业务复杂并发
     <figcaption>Templates</figcaption>
 </figure>
 
-## 四、TapTap 企业级设计系统 Figma 开源地址
+## TapTap 企业级设计系统 Figma 开源地址
 
 TapTap Design System | Developers 现已正式在 Figma 社区开放，欢迎各位使用和体验~
 
@@ -179,7 +179,7 @@ Figma 官方社区： [Figma Community](https://www.figma.com/community/design_s
 
 ![Figma 近期热门](/post-images/trending.png)
 
-## 五、积极共建
+## 积极共建
 
 我们非常重视每一位用户的意见和建议，帮助我们未来做的更好，希望大家可以热情反馈，积极共建~
 
