@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import HeaderBackground from "./HeaderBackground";
 
 import styles from "../styles/header.module.scss";
 import logoSVG from "../public/taptap.svg";
 import menuIcon from "../public/icons/menu.svg";
 import closeIcon from "../public/icons/close.svg";
-import headerBackground from "../public/photos/2.jpg";
 
 export default function Header({ postImage, children }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,14 +16,7 @@ export default function Header({ postImage, children }) {
   return (
     <header className={styles.header}>
       <div className={styles.background}>
-        <div className={styles.image}>
-          <Image
-            src={postImage || headerBackground}
-            alt={postImage ? "" : "TapTap 办公楼首层的大厅。"}
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
+        <HeaderBackground path={postImage} />
       </div>
 
       <div className={`${styles.container} ${postImage ? styles.neutral : ""}`}>

@@ -5,7 +5,21 @@ import styles from "../../styles/post.module.scss";
 
 export default function Post({ post }) {
   const prettyDate = new Date(post.date).toLocaleDateString("zh-CN");
-  const postImage = post.image && require(`../../public/photos/${post.image}`);
+
+  const getSocialImageURL = (postImage) => {
+    const BASE_URL = "https://blog.taptap.dev/";
+
+    if (!postImage) {
+      return `${BASE_URL}tap-icon.png`;
+    }
+
+    try {
+      require(`../../public/photos/${postImage}`);
+      return `${BASE_URL}photos/${postImage}`;
+    } catch {
+      return `${BASE_URL}photos/${postImage}/social.png`;
+    }
+  };
 
   return (
     <>
@@ -14,20 +28,13 @@ export default function Post({ post }) {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta
-          property="og:image"
-          content={
-            postImage
-              ? `https://blog.taptap.dev/photos/${post.image}`
-              : "https://blog.taptap.dev/tap-icon.png"
-          }
-        />
-        {postImage && (
+        <meta property="og:image" content={getSocialImageURL(post.image)} />
+        {post.image && (
           <meta property="twitter:card" content="summary_large_image" />
         )}
       </Head>
 
-      <Header postImage={postImage}>
+      <Header postImage={post.image}>
         <div className={styles.heroContent}>
           <p>
             <time dateTime={post.date}>{prettyDate}</time>

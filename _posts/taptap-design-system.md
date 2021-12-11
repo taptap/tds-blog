@@ -3,7 +3,7 @@ title: "从服务出发，打造生长、包容、全面的 TapTap 企业级设�
 excerpt: "基于游戏开发者平台领域，提炼出来的全面、易用的 UI 解决方案"
 date: "2021-12-09"
 author: YangYuXi
-image: "taptap-design-system.png"
+image: "taptap-design-system"
 ---
 
 TapTap Design System ｜ Developers 是由 TapTap Design Team B 端设计团队（TDS UX Design），基于游戏开发者平台领域，提炼出来的全面、易用的 UI 解决方案。

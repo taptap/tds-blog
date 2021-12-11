@@ -18,7 +18,7 @@
   h1 {
     margin: 0;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -111,8 +111,6 @@
 
 @media (min-width: 48rem) {
   .heroContent {
-    padding: 0 0 3rem 0;
-
     h1 {
       font-size: 3rem;
     }
@@ -124,10 +122,6 @@
 }
 
 @media (min-width: 72rem) {
-  .heroContent {
-    padding: 0 0 4rem 0;
-  }
-
   .main {
     padding: 4rem 0;
   }
