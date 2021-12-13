@@ -80,7 +80,7 @@ B 端产品通常有较长的产研周期，多平台合作，业务复杂并发
 
 通过小颗粒元素组合大颗粒元素的逐层嵌套，构成了我们现在组件库中的各个元素，覆盖了 38 种组件类型和 1000 多种组件状态。
 
-![组件类型](/post-images/various-components.png)
+![组件类型](/post-images/various-components.gif)
 ![组件概览](/post-images/overview.gif)
 
 #### 在线即可体验的交互效果
