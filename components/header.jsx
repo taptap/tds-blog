@@ -8,7 +8,7 @@ import logoSVG from "../public/taptap.svg";
 import menuIcon from "../public/icons/menu.svg";
 import closeIcon from "../public/icons/close.svg";
 
-export default function Header({ postImage, children }) {
+export default function Header({ post, children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const openMenu = () => setMenuOpen(true);
   const closeMenu = () => setMenuOpen(false);
@@ -16,10 +16,17 @@ export default function Header({ postImage, children }) {
   return (
     <header className={styles.header}>
       <div className={styles.background}>
-        <HeaderBackground path={postImage} />
+        <HeaderBackground
+          image={post?.image}
+          image_folder={post?.image_folder}
+        />
       </div>
 
-      <div className={`${styles.container} ${postImage ? styles.neutral : ""}`}>
+      <div
+        className={`${styles.container} ${
+          post?.image || post?.image_folder ? styles.neutral : ""
+        }`}
+      >
         <nav className={styles.nav}>
           <div className={styles.stage}>
             <div className={styles.navContent}>
