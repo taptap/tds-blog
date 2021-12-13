@@ -1,0 +1,51 @@
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &.small {
+    display: block;
+  }
+
+  &.medium,
+  &.large,
+  &.giant {
+    display: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .image {
+    &.small {
+      display: none;
+    }
+
+    &.medium {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 72rem) {
+  .image {
+    &.medium {
+      display: none;
+    }
+
+    &.large {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 96rem) {
+  .image {
+    &.large {
+      display: none;
+    }
+
+    &.giant {
+      display: block;
+    }
+  }
+}

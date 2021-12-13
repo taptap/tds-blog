@@ -18,7 +18,7 @@
   h1 {
     margin: 0;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -39,6 +39,13 @@
       font-weight: 500;
     }
 
+    h5,
+    h6 {
+      font-size: 1rem;
+      box-shadow: 0.1rem 0 0 0 inset rgba(21, 197, 206, 1);
+      padding: 0 0 0 1rem;
+    }
+
     a {
       text-decoration: underline;
       text-decoration-color: rgba(21, 197, 206, 0.4);
@@ -51,6 +58,10 @@
       &:focus {
         text-decoration: none;
       }
+    }
+
+    ol {
+      padding-left: 1.2rem;
     }
 
     blockquote {
@@ -79,15 +90,28 @@
     }
 
     img {
+      display: block;
+      margin: 2rem 0;
       max-width: 100%;
+    }
+
+    figure {
+      margin: 2rem 0;
+
+      img {
+        margin: 0 0 0.5rem;
+      }
+
+      figcaption {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.3);
+      }
     }
   }
 }
 
 @media (min-width: 48rem) {
   .heroContent {
-    padding: 0 0 3rem 0;
-
     h1 {
       font-size: 3rem;
     }
@@ -99,10 +123,6 @@
 }
 
 @media (min-width: 72rem) {
-  .heroContent {
-    padding: 0 0 4rem 0;
-  }
-
   .main {
     padding: 4rem 0;
   }
