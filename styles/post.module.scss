@@ -39,10 +39,11 @@
       font-weight: 500;
     }
 
-    h4,
     h5,
     h6 {
       font-size: 1rem;
+      box-shadow: 0.1rem 0 0 0 inset rgba(21, 197, 206, 1);
+      padding: 0 0 0 1rem;
     }
 
     a {

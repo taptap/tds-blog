@@ -174,6 +174,8 @@ TapTap 企业级设计系统官方地址：[TapTap Design System ｜ Developers]
 
 Figma 官方社区：[Figma Community](https://www.figma.com/community/design_systems)
 
+![Figma 社区热门文件](/post-images/trending.png)
+
 ## 积极共建
 
 我们非常重视每一位用户的意见和建议，帮助我们未来做的更好，希望大家可以热情反馈，积极共建～
