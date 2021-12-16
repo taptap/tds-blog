@@ -2,17 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Header from "../../components/header";
-import { getTalks } from "../../lib/talks";
+import { getTalks, getProjects } from "../../lib/data";
 import { getAllPages } from "../../lib/api";
 import styles from "../../styles/posts.module.scss";
 import heroImage from "../../public/photos/1.jpg";
 
-export default function Open({ pages, talks }) {
+export default function Open({ pages, talks, projects }) {
   pages.sort((first, second) => (first.slug > second.slug ? 1 : -1));
 
   const culturePages = pages.filter((page) => page.category === "culture");
   const guidePages = pages.filter((page) => page.category === "guide");
-  const projectPages = pages.filter((page) => page.category === "project");
 
   return (
     <>
@@ -79,10 +78,10 @@ export default function Open({ pages, talks }) {
 
               <div className={styles.list}>
                 <ul className={styles.small}>
-                  {projectPages.map((page) => (
-                    <li key={page.slug}>
-                      <a href={page.url} target="_blank" rel="noreferrer">
-                        <h3>{page.title}</h3>
+                  {projects.map((project) => (
+                    <li key={project.url}>
+                      <a href={project.url} target="_blank" rel="noreferrer">
+                        <h3>{project.title}</h3>
                       </a>
                     </li>
                   ))}
@@ -121,6 +120,7 @@ export function getStaticProps() {
     props: {
       pages: getAllPages(),
       talks: getTalks(),
+      projects: getProjects()
     },
   };
 }
