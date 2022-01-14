@@ -114,8 +114,20 @@ https://github.com/YOUR-GITHUB-USERNAME/tds-blog/
 可选的详情
 ```
 
-Source Control 面板上方、SOURCE CONTROL 字样右侧有一行图标，点击左边第二个「Create Pull Request」按钮即可创建 PR。
+按 Ctrl/Command + Enter 即可提交。
 
+提交后访问 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/pulls （请替换 URL 中的用户名）
+
+在 Pull Requests 页面点击右上方绿色的 New pull request 按钮，会显示你所做的改动。
+大致看一下有没有问题，如果有问题的话，就关闭页面，重新回到 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/ 按 `.` 进入编辑模式再修改。
+没问题的话，点绿色的 Create pull request 按钮进入 PR 表单。
+PR 标题 GitHub 会自动填写，如果不满意，可以修改一下。
+右方 Reviewer 选择 weakish 或 fuchenshi，然后再点绿色的 Create pull request 按钮提交。
+
+提交后 CI 会自动构建博客预览，请稍候。
+预览构建完成后，机器人 netlify bot 的回复中会出现「😎 Browse the preview: 」，点击后面的 URL 即可查看效果。
+不同于 GitHub 编辑模式自动的预览，这个是真正的预览，未来发布后，线上显示的效果和预览一模一样，包括各种格式和图片。
+如果查看预览的过程中发现了问题，请重新回到 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/ 按 `.` 进入编辑模式再修改。
 
 
 
