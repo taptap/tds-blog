@@ -128,9 +128,19 @@ PR 标题 GitHub 会自动填写，如果不满意，可以修改一下。
 预览构建完成后，机器人 netlify bot 的回复中会出现「😎 Browse the preview: 」，点击后面的 URL 即可查看效果。
 不同于 GitHub 编辑模式自动的预览，这个是真正的预览，未来发布后，线上显示的效果和预览一模一样，包括各种格式和图片。
 如果查看预览的过程中发现了问题，请重新回到 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/ 按 `.` 进入编辑模式再修改。
+提交修改（Source Control 面板按 Ctrl/Command + Enter）后，PR 会自动更新，也会自动再次触发预览构建，请再次等待机器人 netlify bot 的回复中出现「😎 Browse the preview: 」,再次查看预览效果。
 
+一切就绪后，等 reviewer 通过 PR 并合并，文章就正式发布到线上了。
 
+## Tips
 
+Confluence wiki 等网页上的富文本内容，可以复制到 [StackEdit] （免费） 或 [Typora]（收费），可以快速转换为 markdown 代码。
+注意，部分格式转换时会丢失或错误，需要手工修正。
 
+[StackEdit]: https://stackedit.io/app
+[Typora]: https://typora.io
 
+命令行工具 [pandoc] 支持转换多种文件为 markdown，同样，部分格式转换时会丢失或错误，需要手工修正。
+
+[pandoc]: https://pandoc.org/index.html
 
