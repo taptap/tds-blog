@@ -49,7 +49,14 @@ markdown 内容
 
 ### 编辑
 
-在[博客的 GitHub 仓库页面][repo]按下 `.` （英文句号），即可进入 GitHub 的编辑模式。
+在[博客的 GitHub 仓库页面][repo]点击右上角的「Fork」图标，fork 本仓库。
+如果之前没有 fork 过，会 fork 一个新仓库；如果之前已经 fork 过，会提示你的 fork 的地址：
+
+```
+https://github.com/YOUR-GITHUB-USERNAME/tds-blog/
+```
+
+**在你 fork 的仓库页面**， 按下 `.` （英文句号），即可进入 GitHub 的编辑模式。
 
 [repo]: https://github.com/taptap/tds-blog/
 
@@ -95,7 +102,7 @@ markdown 内容
 
 ### 提交
 
-最后在 Source Control 面板看一下变动情况，没问题的话就点击 Changes 右侧的加号，让改动进入 Staged Changes.
+最后在 Source Control 面板看一下变动情况，没问题的话就**点击 Changes 右侧的加号，让改动进入 Staged Changes**.
 
 最后在上面的 Message 文本框写一下 Commit Message，简单说明下做了什么改动。
 大多数情况下，用一句话简短描述改动内容即可。
@@ -107,7 +114,7 @@ markdown 内容
 可选的详情
 ```
 
-
+Source Control 面板上方、SOURCE CONTROL 字样右侧有一行图标，点击左边第二个「Create Pull Request」按钮即可创建 PR。
 
 
 
