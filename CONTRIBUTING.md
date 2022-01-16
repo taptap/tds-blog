@@ -49,7 +49,14 @@ markdown 内容
 
 ### 编辑
 
-在[博客的 GitHub 仓库页面][repo]按下 `.` （英文句号），即可进入 GitHub 的编辑模式。
+在[博客的 GitHub 仓库页面][repo]点击右上角的「Fork」图标，fork 本仓库。
+如果之前没有 fork 过，会 fork 一个新仓库；如果之前已经 fork 过，会提示你的 fork 的地址：
+
+```
+https://github.com/YOUR-GITHUB-USERNAME/tds-blog/
+```
+
+**在你 fork 的仓库页面**， 按下 `.` （英文句号），即可进入 GitHub 的编辑模式。
 
 [repo]: https://github.com/taptap/tds-blog/
 
@@ -95,7 +102,7 @@ markdown 内容
 
 ### 提交
 
-最后在 Source Control 面板看一下变动情况，没问题的话就点击 Changes 右侧的加号，让改动进入 Staged Changes.
+最后在 Source Control 面板看一下变动情况，没问题的话就**点击 Changes 右侧的加号，让改动进入 Staged Changes**.
 
 最后在上面的 Message 文本框写一下 Commit Message，简单说明下做了什么改动。
 大多数情况下，用一句话简短描述改动内容即可。
@@ -107,11 +114,33 @@ markdown 内容
 可选的详情
 ```
 
+按 Ctrl/Command + Enter 即可提交。
 
+提交后访问 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/pulls （请替换 URL 中的用户名）
 
+在 Pull Requests 页面点击右上方绿色的 New pull request 按钮，会显示你所做的改动。
+大致看一下有没有问题，如果有问题的话，就关闭页面，重新回到 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/ 按 `.` 进入编辑模式再修改。
+没问题的话，点绿色的 Create pull request 按钮进入 PR 表单。
+PR 标题 GitHub 会自动填写，如果不满意，可以修改一下。
+右方 Reviewer 选择 weakish 或 fuchenshi，然后再点绿色的 Create pull request 按钮提交。
 
+提交后 CI 会自动构建博客预览，请稍候。
+预览构建完成后，机器人 netlify bot 的回复中会出现「😎 Browse the preview: 」，点击后面的 URL 即可查看效果。
+不同于 GitHub 编辑模式自动的预览，这个是真正的预览，未来发布后，线上显示的效果和预览一模一样，包括各种格式和图片。
+如果查看预览的过程中发现了问题，请重新回到 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/ 按 `.` 进入编辑模式再修改。
+提交修改（Source Control 面板按 Ctrl/Command + Enter）后，PR 会自动更新，也会自动再次触发预览构建，请再次等待机器人 netlify bot 的回复中出现「😎 Browse the preview: 」,再次查看预览效果。
 
+一切就绪后，等 reviewer 通过 PR 并合并，文章就正式发布到线上了。
 
+## Tips
 
+Confluence wiki 等网页上的富文本内容，可以复制到 [StackEdit] （免费） 或 [Typora]（收费），可以快速转换为 markdown 代码。
+注意，部分格式转换时会丢失或错误，需要手工修正。
 
+[StackEdit]: https://stackedit.io/app
+[Typora]: https://typora.io
+
+命令行工具 [pandoc] 支持转换多种文件为 markdown，同样，部分格式转换时会丢失或错误，需要手工修正。
+
+[pandoc]: https://pandoc.org/index.html
 
