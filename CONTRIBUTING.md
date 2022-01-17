@@ -66,7 +66,7 @@ markdown 内容
 [repo]: https://github.com/taptap/tds-blog/
 
 取决于操作系统和浏览器配置，这个快捷键也可能失效。
-如果快捷键不起效，可以把浏览器地址栏的 `github.com` 换成 `gihhub.dev`，通过这种方式同样可以进入编辑模式。
+如果快捷键不起效，可以把浏览器地址栏的 `github.com` 换成 `github.dev`，通过这种方式同样可以进入编辑模式。
 
 这个 GitHub 编辑模式其实是一个功能精（shòu）简（xiàn）的 vscode 编辑器，所以它的用法可以参考 [vscode 的官方文档](https://code.visualstudio.com/docs)。
 
