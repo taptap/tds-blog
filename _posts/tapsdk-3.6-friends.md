@@ -1,5 +1,5 @@
 ---
-title: "TapSDK 3.6 笨笨更新公告 —— 好友和悬浮窗"
+title: "TapSDK 3.6 版本更新公告 —— 好友和悬浮窗"
 excerpt: "好友支持了关注模式，并且开发者可以接入悬浮窗来进行一键接入 TDS 服务"
 date: "2022-01-17"
 author: "weikailing"
