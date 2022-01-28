@@ -4,6 +4,10 @@ title: 为什么在 Apple Silicon 上装 Docker 这么难
 
 最近公司的很多同事都换上了搭载 M1 Pro 或 M1 Max 的新款 MacBook Pro，虽然日常使用的软件如 Chrome、Visual Studio Code 和 Slack 都已经适配得很好了，但面对 Docker 却犯了难。
 
+![Development Environments](/post-images/engine-development-environments.png)
+
+> 图为内部 Wiki，我们尝试过各种不同的 Docker 开发环境
+
 众所周知，Docker 用到了 Linux 的两项特性：namespaces 和 cgroups 来提供隔离与资源限制，因此无论如何在 macOS 上我们必须通过一个虚拟机来使用 Docker。
 
 在 2021 年 4 月时，Docker for Mac（Docker Desktop）[发布了](https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/) 对 Apple Silicon 的实验性的支持，它会使用 QEMU 运行一个 ARM 架构的 Linux 虚拟机，默认运行 ARM 架构的镜像，但也支持运行 x86 的镜像。
@@ -36,7 +40,31 @@ Docker for Mac 确实很好，除了解决新架构带来的问题之外它还�
 
 但我们希望能在本地运行完整的 rootful 模式的 dockerd 和 kubernetes 来尽可能地模拟真实的线上环境，好在 lima 提供了丰富的 [自定义能力](https://github.com/lima-vm/lima/blob/master/pkg/limayaml/default.yaml)，我基于社区中的一些脚本（[docker.yaml](https://github.com/lima-vm/lima/blob/master/examples/docker.yaml) 和 [minikube.yaml](https://github.com/afbjorklund/lima/blob/minikube/examples/minikube.yaml)）实现了我们的需求，而且这些自定义的逻辑都被以脚本的形式写到了 yaml 描述文件中，只需一条命令就可以创建出相同的虚拟机。
 
-> TODO: 创建新的虚拟机截图
+```plain
+~ ❯ limactl start docker.yaml
+? Creating an instance "docker" Proceed with the default configuration
+INFO[0005] Attempting to download the image from "https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-arm64.img"
+INFO[0005] Using cache "/Users/ziting/Library/Caches/lima/download/by-url-sha256/ae20df823d41d1dd300f8866889804ab25fb8689c1a68da6b13dd60a8c5c9e35/data"
+INFO[0006] [hostagent] Starting QEMU (hint: to watch the boot progress, see "/Users/ziting/.lima/docker/serial.log")
+INFO[0006] SSH Local Port: 55942
+INFO[0006] [hostagent] Waiting for the essential requirement 1 of 5: "ssh"
+INFO[0039] [hostagent] Waiting for the essential requirement 2 of 5: "user session is ready for ssh"
+INFO[0039] [hostagent] Waiting for the essential requirement 3 of 5: "sshfs binary to be installed"
+INFO[0048] [hostagent] Waiting for the essential requirement 4 of 5: "/etc/fuse.conf to contain \"user_allow_other\""
+INFO[0051] [hostagent] Waiting for the essential requirement 5 of 5: "the guest agent to be running"
+INFO[0051] [hostagent] Mounting "/Users/ziting"
+INFO[0051] [hostagent] Mounting "/tmp/lima"
+INFO[0052] [hostagent] Forwarding "/run/lima-guestagent.sock" (guest) to "/Users/ziting/.lima/docker/ga.sock" (host)
+INFO[0092] [hostagent] Waiting for the optional requirement 1 of 1: "user probe 1/1"
+INFO[0154] [hostagent] Forwarding TCP from [::]:2376 to 127.0.0.1:2376
+INFO[0304] [hostagent] Forwarding TCP from [::]:8443 to 127.0.0.1:8443
+INFO[0332] [hostagent] Waiting for the final requirement 1 of 1: "boot scripts must have finished"
+INFO[0351] READY. Run `limactl shell docker` to open the shell.
+INFO[0351] To run `docker` on the host (assumes docker-cli is installed):
+INFO[0351] $ export DOCKER_HOST=tcp://127.0.0.1:2376
+INFO[0351] To run `kubectl` on the host (assumes kubernetes-cli is installed):
+INFO[0351] $ mkdir -p .kube && limactl cp minikube:.kube/config .kube/config
+```
 
 还有一个类似的 [colima](https://github.com/abiosoft/colima) 是对 lima 的一个封装，默认提供 rootful 的 dockerd 和 k8s，但 colima 并没有对外暴露 lima 强大的自定义能力，因此我们没有使用，但对于没那么多要求的开发者来说，也是一个更易用的选择。
 
@@ -44,7 +72,16 @@ Docker for Mac 确实很好，除了解决新架构带来的问题之外它还�
 
 社区中也有 [qus](https://dbhi.github.io/qus/) 这样的项目，对这些能力进行了封装，只需执行一行 `docker run --rm --privileged aptman/qus -s -- -p x86_64` 就可以让你的 ARM 虚拟机魔法般地支持运行 x86 的镜像。
 
-> TODO: 运行中的容器的进程树
+```plain
+/usr/bin/containerd-shim-runc-v2
+ \_ /qus/bin/qemu-x86_64-static /usr/sbin/nginx -g daemon off;
+     \_ /qus/bin/qemu-x86_64-static /usr/sbin/nginx -g daemon off;
+     \_ /qus/bin/qemu-x86_64-static /usr/sbin/nginx -g daemon off;
+     \_ /qus/bin/qemu-x86_64-static /usr/sbin/nginx -g daemon off;
+     \_ /qus/bin/qemu-x86_64-static /usr/sbin/nginx -g daemon off;
+```
+
+> 使用 qus 运行 x86 镜像的进程树如上，所有进程（包括创建出的子进程）都自动通过 qemu 模拟运行。
 
 虽然云引擎也是基于 Docker 等容器技术构建的，但云引擎力图为用户提供开箱即用的使用体验而不必自己配置容器环境、编写构建脚本、收集日志和统计数据。如果想得到容器化带来的平滑部署、快速回滚、自动扩容等好处但又不想花时间配置，不如来试试云引擎。
 
