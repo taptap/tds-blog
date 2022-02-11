@@ -8,9 +8,9 @@ title: 为什么在 Apple Silicon 上装 Docker 这么难
 
 > 图为内部 Wiki，我们尝试过各种不同的 Docker 开发环境
 
-众所周知，Docker 用到了 Linux 的两项特性：namespaces 和 cgroups 来提供隔离与资源限制，因此无论如何在 macOS 上我们必须通过一个虚拟机来使用 Docker。
+众所周知，Docker 用到了 Linux 的两项特性：namespaces 和 cgroups 来提供隔离与资源限制，因此无论如何在 macOS 上我们都必须通过一个虚拟机来使用 Docker。
 
-在 2021 年 4 月时，Docker for Mac（Docker Desktop）[发布了](https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/) 对 Apple Silicon 的实验性的支持，它会使用 QEMU 运行一个 ARM 架构的 Linux 虚拟机，默认运行 ARM 架构的镜像，但也支持运行 x86 的镜像。
+在 2021 年 4 月时，Docker for Mac（Docker Desktop）[发布了](https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/) 对 Apple Silicon 的实验性支持，它会使用 QEMU 运行一个 ARM 架构的 Linux 虚拟机，默认运行 ARM 架构的镜像，但也支持运行 x86 的镜像。
 
 ![Docker for Mac](/post-images/docker-for-mac.png)
 
@@ -18,7 +18,7 @@ title: 为什么在 Apple Silicon 上装 Docker 这么难
 
 Docker for Mac 其实就是分别用到了 QEMU 的这两种能力来在 ARM 虚拟机上运行 x86 镜像，和在 Mac 上运行 ARM 虚拟机。
 
-Docker for Mac 确实很好，除了解决新架构带来的问题之外它还对文件系统和网络进行了映射，容器可以像运行在本机上一样访问文件系统或暴露网络端口到本机，几乎感觉不到虚拟机的存在。但 LeanCloud 加入 TapTap 之后已经不是小公司了，按照 Docker Desktop 在 2021 年 8 月推出的 [新版价格方案](https://www.docker.com/blog/updating-product-subscriptions/)，我们每个人需要支付至少 $5 每月的订阅费用。倒不是我们付不起这个钱，只是我想要找一找开源的方案。
+Docker for Mac 确实很好，除了解决新架构带来的问题之外它还对文件系统和网络进行了映射，容器可以像运行在本机上一样访问文件系统或暴露网络端口到本机，几乎感觉不到虚拟机的存在。但 LeanCloud 加入 TapTap 之后已经不是小公司了，按照 Docker Desktop 在 2021 年 8 月推出的 [新版价格方案](https://www.docker.com/blog/updating-product-subscriptions/)，我们每个人需要支付至少 $5 每月的订阅费用。倒不是我们不愿意付这个钱，只是我想要找一找开源的方案。
 
 之前在 Intel Mac 上，我们会用 Vagrant 或 minikube 来创建虚拟机，它们底层会使用 VirtualBox 或 HyperKit 来完成实际的虚拟化。但 VirtualBox 和 HyperKit 都没有支持 Apple Silicon 的计划。实际上目前开源的虚拟化方案中只有 QEMU 对 Apple Silicon 有比较好的支持，QEMU 本身只提供命令行的接口，例如 Docker for Mac 调用 QEMU 时的命令行参数是这样：
 
@@ -30,13 +30,11 @@ Docker for Mac 确实很好，除了解决新架构带来的问题之外它还�
 
 [Lima](https://github.com/lima-vm/lima) 自称是 macOS 上的 Linux 子系统（macOS subsystem for Linux），它使用 QEMU 运行了一个 Linux 虚拟机，其中安装有 rootless 模式的 containerd，还通过 SSH 提供了文件映射和自动的端口转发。
 
-为什么是 containerd 而不是 Docker 呢？
-
-随着容器编排平台 Kubernetes 如日中天，社区希望将运行容器这个关键环节进行标准化，让引入 Docker 之外的其他容器运行时更加容易，于是 [推出了 Container Runtime Interface](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/) (CRI)。containerd 就是从 Docker 中拆分出的一个 CRI 的实现 ，相比于 Docker 本体更加精简，现在也交由社区维护。
+但为什么是 containerd 而不是 Docker 呢？随着容器编排平台 Kubernetes 如日中天，社区希望将运行容器这个关键环节进行标准化，让引入 Docker 之外的其他容器运行时更加容易，于是 [推出了 Container Runtime Interface](https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/) (CRI)。containerd 就是从 Docker 中拆分出的一个 CRI 的实现，相比于 Docker 本体更加精简，现在也交由社区维护。
 
 因此如 Lima 这样新的的开源软件会更偏好选择 containerd 来运行容器，因为组件更加精简会有更好的性能，也不容易受到 Docker 产品层面变化的影响。nerdctl 是与 containerd 配套的命令行客户端（`nerd` 是 `containerd` 的末尾 4 个字母），用法与 docker 或 docker-compose 相似（但并不完全兼容）。
 
-所谓 [rootless](https://rootlesscontaine.rs/) 则是指通过替换一些组件，让容器运行时（cotainerd）和容器都运行在非 root 用户下，这样绝大部分操作都不需要切换到 root 来进行，也可以减少安全漏洞的攻击面。
+所谓 [rootless](https://rootlesscontaine.rs/) 则是指通过替换一些组件，让容器运行时（cotainerd）和容器都运行在非 root 用户下，每个用户都有自己的 containerd，这样绝大部分操作都不需要切换到 root 来进行，也可以减少安全漏洞的攻击面。
 
 但我们希望能在本地运行完整的 rootful 模式的 dockerd 和 kubernetes 来尽可能地模拟真实的线上环境，好在 lima 提供了丰富的 [自定义能力](https://github.com/lima-vm/lima/blob/master/pkg/limayaml/default.yaml)，我基于社区中的一些脚本（[docker.yaml](https://github.com/lima-vm/lima/blob/master/examples/docker.yaml) 和 [minikube.yaml](https://github.com/afbjorklund/lima/blob/minikube/examples/minikube.yaml)）实现了我们的需求，而且这些自定义的逻辑都被以脚本的形式写到了 yaml 描述文件中，只需一条命令就可以创建出相同的虚拟机。
 
@@ -66,9 +64,9 @@ INFO[0351] To run `kubectl` on the host (assumes kubernetes-cli is installed):
 INFO[0351] $ mkdir -p .kube && limactl cp minikube:.kube/config .kube/config
 ```
 
-还有一个类似的 [colima](https://github.com/abiosoft/colima) 是对 lima 的一个封装，默认提供 rootful 的 dockerd 和 k8s，但 colima 并没有对外暴露 lima 强大的自定义能力，因此我们没有使用，但对于没那么多要求的开发者来说，也是一个更易用的选择。
+我还发现了另外一个基于 lima 的封装 —— [colima](https://github.com/abiosoft/colima)，默认提供 rootful 的 dockerd 和 Kubernetes，但 colima 并没有对外暴露 lima 强大的自定义能力，因此我们没有使用，但对于没那么多要求的开发者来说，也是一个更易用的选择。
 
-在默认的情况下，Lima 中的 Docker 在 Apple Silicon 上只能运行 ARM 版的镜像，但就像前面提到的那样，我们可以使用 QEMU 的模拟运行的能力来运行其他架构（如 x86）的容器。`qemu-user-static` 是一个进程级别的模拟器，可以像一个解释器一样运行其他架构的可执行文件，我们可以利用 Linux 的一项 [Binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc)（[中文版](https://zh.wikipedia.org/wiki/Binfmt_misc)） 的特性让 Linux 遇到特定架构的可执行文件时自动调用 `qemu-user-static`，这种能力同样适用于容器中的可执行文件。
+在默认的情况下，Lima 中的 Docker 在 Apple Silicon 上只能运行 ARM 架构的镜像，但就像前面提到的那样，我们可以使用 QEMU 的模拟运行的能力来运行其他架构（如 x86）的容器。`qemu-user-static` 是一个进程级别的模拟器，可以像一个解释器一样运行其他架构的可执行文件，我们可以利用 Linux 的一项 [Binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc)（[中文版](https://zh.wikipedia.org/wiki/Binfmt_misc)）的特性让 Linux 遇到特定架构的可执行文件时自动调用 `qemu-user-static`，这种能力同样适用于容器中的可执行文件。
 
 社区中也有 [qus](https://dbhi.github.io/qus/) 这样的项目，对这些能力进行了封装，只需执行一行 `docker run --rm --privileged aptman/qus -s -- -p x86_64` 就可以让你的 ARM 虚拟机魔法般地支持运行 x86 的镜像。
 
