@@ -34,10 +34,10 @@ export default function Page({ page }) {
   );
 }
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      page: getPageBySlug(params.slug),
+      page: await getPageBySlug(params.slug),
     },
   };
 }
