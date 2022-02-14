@@ -1,2 +1,5 @@
 [build.processing.images]
   compress = true
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
