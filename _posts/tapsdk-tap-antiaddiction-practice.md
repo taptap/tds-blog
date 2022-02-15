@@ -76,7 +76,7 @@ TDS 的实名认证有两种方式：
 
 * TapTap 快速认证
 
-TapTap 快速认证服务顾名思义，是通过玩家已经在 Tap 社区客户端已经有账号登陆，而且该账号是已经通过 Tap 社区客户端实名过的。**这种方式的前提是游戏需要接入 [TapTap 登录](https://developer.taptap.com/docs/sdk/taptap-login/features/)功能**，游戏可以选择通过基于[内建账户系统](https://developer.taptap.com/docs/sdk/authentication/features/)接入 TapTap 登录，或者以[单纯 TapTap 用户认证](https://developer.taptap.com/docs/sdk/taptap-login/guide/tap-login/)的方式接入 TapTap 登录。登陆成功后需要将 TapSDK 返回的玩家属性用户唯一标识作为参数传递给防沉迷的接口，从而才可以开始 TapTap 快速认证。具体的代码示范如下：
+TapTap 快速认证服务顾名思义，是通过玩家已经在 Tap 社区客户端已经有账号登陆，而且该账号是已经通过 TapTap 客户端实名过的。**这种方式的前提是游戏需要接入 [TapTap 登录](https://developer.taptap.com/docs/sdk/taptap-login/features/)功能**，游戏可以选择通过基于[内建账户系统](https://developer.taptap.com/docs/sdk/authentication/features/)接入 TapTap 登录，或者以[单纯 TapTap 用户认证](https://developer.taptap.com/docs/sdk/taptap-login/guide/tap-login/)的方式接入 TapTap 登录。登陆成功后需要将 TapSDK 返回的玩家属性用户唯一标识作为参数传递给防沉迷的接口，从而才可以开始 TapTap 快速认证。具体的代码示范如下：
 
 ```java
 bool isUseTapLogin = true;
