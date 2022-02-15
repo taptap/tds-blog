@@ -15,7 +15,7 @@ author: "shouwang"
 
 初始化 SDK：
 
-```java
+```csharp
 string gameIdentifier = "游戏的 Client ID";
 // 是否启用时长限制功能
 bool useTimeLimit = true;
@@ -78,7 +78,7 @@ TDS 的实名认证有两种方式：
 
 TapTap 快速认证服务顾名思义，是通过玩家已经在 Tap 社区客户端已经有账号登陆，而且该账号是已经通过 TapTap 客户端实名过的。**这种方式的前提是游戏需要接入 [TapTap 登录](https://developer.taptap.com/docs/sdk/taptap-login/features/)功能**，游戏可以选择通过基于[内建账户系统](https://developer.taptap.com/docs/sdk/authentication/features/)接入 TapTap 登录，或者以[单纯 TapTap 用户认证](https://developer.taptap.com/docs/sdk/taptap-login/guide/tap-login/)的方式接入 TapTap 登录。登陆成功后需要将 TapSDK 返回的玩家属性用户唯一标识作为参数传递给防沉迷的接口，从而才可以开始 TapTap 快速认证。具体的代码示范如下：
 
-```java
+```csharp
 bool isUseTapLogin = true;
 string userIdentifier = "玩家的唯一标识";
 // 玩家唯一标识 userIdentifier，如果接入 TDS 内建账户系统，建议使用 SDK 返回的 objectId 字段；
@@ -98,7 +98,7 @@ AntiAddictionUIKit.Startup(useTapLogin, isUserIdentifier);
 
 如果不使用 TapTap 快速认证，可以通过下面的接口开始防沉迷授权。需要传入的玩家唯一标识 userIdentifier，由游戏自己定义。具体的代码示范如下：
 
-```java
+```csharp
 bool isUseTapLogin = false; // 不使用 TapTap 快速认证
 string userIdentifier = "玩家的唯一标识";
 AntiAddictionUIKit.Startup(isUseTapLogin, userIdentifier); 
@@ -118,7 +118,7 @@ AntiAddictionUIKit.Startup(isUseTapLogin, userIdentifier);
 
 实名认证后，可以统一调用如下接口获取当前玩家的年龄段
 
-```java
+```csharp
 int ageRange = AntiAddictionUIKit.CurrentUserAgeLimit();
 // ageRange 是一个整数，表示玩家所处年龄段的下限（最低年龄）。 特别地，-1 表示「未实名」。
 ```
@@ -137,13 +137,13 @@ int ageRange = AntiAddictionUIKit.CurrentUserAgeLimit();
 
 如果启用时长限制功能，需要上报游戏时长。已登录的玩家，开始游戏时调用此接口，之后 SDK 会自动轮询上报游戏时长。
 
-```java
+```csharp
 AntiAddictionUIKit.EnterGame();
 ```
 
 相应地，已登录的玩家，停止游戏时调用此接口，之后 SDK 停止轮询上报时长。
 
-```java
+```csharp
 AntiAddictionUIKit.LeaveGame();
 ```
 
@@ -153,7 +153,7 @@ AntiAddictionUIKit.LeaveGame();
 ![](/post-images/tap_antidiction_04.png)
 
 如果初始化 SDK 时设置的一个参数 showSwitchAccount 为 false 表示不显示「切换账号」按钮，那此时的未成年玩家只能选择「退出游戏」了。
-```java
+```csharp
 // 是否显示切换账号按钮
 bool showSwitchAccount = false;
 ```
