@@ -34,7 +34,7 @@ Docker for Mac 确实很好，除了解决新架构带来的问题之外它还�
 
 因此如 Lima 这样新的的开源软件会更偏好选择 containerd 来运行容器，因为组件更加精简会有更好的性能，也不容易受到 Docker 产品层面变化的影响。nerdctl 是与 containerd 配套的命令行客户端（`nerd` 是 `containerd` 的末尾 4 个字母），用法与 docker 或 docker-compose 相似（但并不完全兼容）。
 
-所谓 [rootless](https://rootlesscontaine.rs/) 则是指通过替换一些组件，让容器运行时（cotainerd）和容器都运行在非 root 用户下，每个用户都有自己的 containerd，这样绝大部分操作都不需要切换到 root 来进行，也可以减少安全漏洞的攻击面。
+所谓 [rootless](https://rootlesscontaine.rs/) 则是指通过替换一些组件，让容器运行时（containerd）和容器都运行在非 root 用户下，每个用户都有自己的 containerd，这样绝大部分操作都不需要切换到 root 来进行，也可以减少安全漏洞的攻击面。
 
 但我们希望能在本地运行完整的 rootful 模式的 dockerd 和 kubernetes 来尽可能地模拟真实的线上环境，好在 lima 提供了丰富的 [自定义能力](https://github.com/lima-vm/lima/blob/master/pkg/limayaml/default.yaml)，我基于社区中的一些脚本（[docker.yaml](https://github.com/lima-vm/lima/blob/master/examples/docker.yaml) 和 [minikube.yaml](https://github.com/afbjorklund/lima/blob/minikube/examples/minikube.yaml)）实现了我们的需求，而且这些自定义的逻辑都被以脚本的形式写到了 yaml 描述文件中，只需一条命令就可以创建出相同的虚拟机。
 
