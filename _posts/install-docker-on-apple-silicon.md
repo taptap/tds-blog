@@ -2,11 +2,11 @@
 title: 为什么在 Apple Silicon 上装 Docker 这么难
 ---
 
-最近公司的很多同事都换上了搭载 M1 Pro 或 M1 Max 的新款 MacBook Pro，虽然日常使用的软件如 Chrome、Visual Studio Code 和 Slack 都已经适配得很好了，但面对 Docker 却犯了难。
-
 ![Development Environments](/post-images/engine-development-environments.png)
 
 > 图为内部 Wiki，我们尝试过各种不同的 Docker 开发环境
+
+最近公司的很多同事都换上了搭载 M1 Pro 或 M1 Max 的新款 MacBook Pro，虽然日常使用的软件如 Chrome、Visual Studio Code 和 Slack 都已经适配得很好了，但面对 Docker 却犯了难。
 
 众所周知，Docker 用到了 Linux 的两项特性：namespaces 和 cgroups 来提供隔离与资源限制，因此无论如何在 macOS 上我们都必须通过一个虚拟机来使用 Docker。
 
@@ -36,7 +36,7 @@ Docker for Mac 确实很好，除了解决新架构带来的问题之外它还�
 
 所谓 [rootless](https://rootlesscontaine.rs/) 则是指通过替换一些组件，让容器运行时（containerd）和容器都运行在非 root 用户下，每个用户都有自己的 containerd，这样绝大部分操作都不需要切换到 root 来进行，也可以减少安全漏洞的攻击面。
 
-但我们希望能在本地运行完整的 rootful 模式的 dockerd 和 kubernetes 来尽可能地模拟真实的线上环境，好在 lima 提供了丰富的 [自定义能力](https://github.com/lima-vm/lima/blob/master/pkg/limayaml/default.yaml)，我基于社区中的一些脚本（[docker.yaml](https://github.com/lima-vm/lima/blob/master/examples/docker.yaml) 和 [minikube.yaml](https://github.com/afbjorklund/lima/blob/minikube/examples/minikube.yaml)）实现了我们的需求，而且这些自定义的逻辑都被以脚本的形式写到了 yaml 描述文件中，只需一条命令就可以创建出相同的虚拟机。
+但我们希望能在本地运行完整的 rootful 模式的 dockerd 和 Kubernetes 来尽可能地模拟真实的线上环境，好在 Lima 提供了丰富的 [自定义能力](https://github.com/lima-vm/lima/blob/master/pkg/limayaml/default.yaml)，我基于社区中的一些脚本（[docker.yaml](https://github.com/lima-vm/lima/blob/master/examples/docker.yaml) 和 [minikube.yaml](https://github.com/afbjorklund/lima/blob/minikube/examples/minikube.yaml)）实现了我们的需求，而且这些自定义的逻辑都被以脚本的形式写到了 yaml 描述文件中，只需一条命令就可以创建出相同的虚拟机。
 
 ```plain
 ~ ❯ limactl start docker.yaml
@@ -64,7 +64,7 @@ INFO[0351] To run `kubectl` on the host (assumes kubernetes-cli is installed):
 INFO[0351] $ mkdir -p .kube && limactl cp minikube:.kube/config .kube/config
 ```
 
-我还发现了另外一个基于 lima 的封装 —— [colima](https://github.com/abiosoft/colima)，默认提供 rootful 的 dockerd 和 Kubernetes，但 colima 并没有对外暴露 lima 强大的自定义能力，因此我们没有使用，但对于没那么多要求的开发者来说，也是一个更易用的选择。
+我还发现了另外一个基于 Lima 的封装 —— [Colima](https://github.com/abiosoft/colima)，默认提供 rootful 的 dockerd 和 Kubernetes，但 Colima 并没有对外暴露 Lima 强大的自定义能力，因此我们没有使用，但对于没那么多要求的开发者来说，也是一个更易用的选择。
 
 在默认的情况下，Lima 中的 Docker 在 Apple Silicon 上只能运行 ARM 架构的镜像，但就像前面提到的那样，我们可以使用 QEMU 的模拟运行的能力来运行其他架构（如 x86）的容器。`qemu-user-static` 是一个进程级别的模拟器，可以像一个解释器一样运行其他架构的可执行文件，我们可以利用 Linux 的一项 [Binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc)（[中文版](https://zh.wikipedia.org/wiki/Binfmt_misc)）的特性让 Linux 遇到特定架构的可执行文件时自动调用 `qemu-user-static`，这种能力同样适用于容器中的可执行文件。
 
@@ -79,9 +79,9 @@ INFO[0351] $ mkdir -p .kube && limactl cp minikube:.kube/config .kube/config
      \_ /qus/bin/qemu-x86_64-static /usr/sbin/nginx -g daemon off;
 ```
 
-> 使用 qus 运行 x86 镜像的进程树如上，所有进程（包括创建出的子进程）都自动通过 qemu 模拟运行。
+> 使用 qus 运行 x86 镜像的进程树如上，所有进程（包括创建出的子进程）都自动通过 QEMU 模拟运行。
 
-回到题目中的问题，因为 Docker 依赖于 Linux 内核的特性，所以在 Mac 上必须通过虚拟机来运行；Apple Silicon 作为新的架构，虚拟机的选择比较受限，因为有些镜像并不提供 ARM 架构的镜像，所以有时还有模拟运行 x86 镜像的需求；Docker Desktop 作为商业产品，有足够的精力来去解决这些「脏活累活」，但它在这个时间点选择对大型商业公司收费；开源社区中新的项目都希望去 Docker 化，用 containerd 取代 dockerd，但这又带来了使用习惯的变化并且可能与线上环境不一致。因为这些原因，目前在 Apple Silicon 上安装 Docker 还是需要花一些时间去了解背景知识的，但好在依然有这些优秀的开源项目可供选择。
+回到题目中的问题，因为 Docker 依赖于 Linux 内核的特性，所以在 Mac 上必须通过虚拟机来运行；Apple Silicon 作为新的架构，虚拟机的选择比较受限，因为有些镜像并不提供 ARM 架构的镜像，所以有时还有模拟运行 x86 镜像的需求；Docker Desktop 作为商业产品，有足够的精力来去解决这些「脏活累活」，但它在这个时间点选择不再允许所有人免费使用；开源社区中新的项目都希望去 Docker 化，用 containerd 取代 dockerd，但这又带来了使用习惯的变化并且可能与线上环境不一致。因为这些原因，目前在 Apple Silicon 上安装 Docker 还是需要花一些时间去了解背景知识的，但好在依然有这些优秀的开源项目可供选择。
 
 虽然云引擎也是基于 Docker 等容器技术构建的，但云引擎力图为用户提供开箱即用的使用体验而不必自己配置容器环境、编写构建脚本、收集日志和统计数据。如果想得到容器化带来的平滑部署、快速回滚、自动扩容等好处但又不想花时间配置，不如来试试云引擎。
 
