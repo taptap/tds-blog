@@ -39,7 +39,7 @@ AntiAddictionUIKit.Init(gameIdentifier, useTimeLimit, usePaymentLimit, showSwitc
         {
             // 该回调状态不需要游戏做额外的处理
             // 说明玩家是未成年，而该未成年玩家此时是不被允许进行游戏的，逻辑上不要进行游戏主界面的跳转，
-            // 这种状态，SDK 内部封装的弹窗会被触发，玩家只能选择「切换账号」 (前提是显示切换账号按钮 bool showSwitchAccount = true) 或者「退出游戏」
+            // 这种状态，SDK 内部封装的弹窗会被触发，玩家只能选择「切换账号」（前提是显示切换账号按钮 bool showSwitchAccount = true）或者「退出游戏」
         }
         if (code == 1095)
         {
@@ -76,7 +76,7 @@ TDS 的实名认证有两种方式：
 
 * TapTap 快速认证
 
-TapTap 快速认证服务顾名思义，是通过玩家已经在 Tap 社区客户端已经有账号登录，而且该账号是已经通过 TapTap 客户端实名过的。**这种方式的前提是游戏需要接入 [TapTap 登录](https://developer.taptap.com/docs/sdk/taptap-login/features/)功能**，游戏可以选择通过基于[内建账户系统](https://developer.taptap.com/docs/sdk/authentication/features/)接入 TapTap 登录，或者以[单纯 TapTap 用户认证](https://developer.taptap.com/docs/sdk/taptap-login/guide/tap-login/)的方式接入 TapTap 登录。登录成功后需要将 TapSDK 返回的玩家属性用户唯一标识作为参数传递给防沉迷的接口，从而才可以开始 TapTap 快速认证。具体的代码示范如下：
+TapTap 快速认证服务顾名思义，是通过玩家在 Tap 社区客户端已经拥有的账号登录，而且该账号是已经通过 TapTap 客户端实名过的。**这种方式的前提是游戏需要接入 [TapTap 登录](https://developer.taptap.com/docs/sdk/taptap-login/features/)功能**，游戏可以选择通过基于[内建账户系统](https://developer.taptap.com/docs/sdk/authentication/features/)接入 TapTap 登录，或者以[单纯 TapTap 用户认证](https://developer.taptap.com/docs/sdk/taptap-login/guide/tap-login/)的方式接入 TapTap 登录。登录成功后需要将 TapSDK 返回的玩家属性用户唯一标识作为参数传递给防沉迷的接口，从而才可以开始 TapTap 快速认证。具体的代码示范如下：
 
 ```csharp
 bool isUseTapLogin = true;
@@ -106,9 +106,9 @@ AntiAddictionUIKit.Startup(isUseTapLogin, userIdentifier);
 
 手动输入实名信息会触发上述的「游戏实名认证」弹窗，玩家输入姓名、身份证号后如果认证失败，会提示「认证未通过，请提交真实信息」，如果乱填写身份证号，则会提示「身份证号码非法」。这些也不需要开发者关心，认证失败时，「游戏实名认证」窗口是不会关闭的，除非玩家点击右上角的 x 按钮主动关闭。这些都是 SDK 内部封装好的，开发者重点需要关心的是文档中给出的回调类型，这个很重要。比如实名认证过程中，玩家点击了右上角的 x 按钮，则会触发 code 为 9002 的回调，该回调告知开发者玩家的动作，表示玩家并没有完成实名认证，开发者对此应该做相应的逻辑处理。
 
-无论采用哪种方式进行实名认证，调用的接口中有个参数需要额外注意下，**userIdentifier：玩家的唯一标识**。如果第一次认证后，紧接着进行第二次认证，userIdentifier 值没有改变的话，TapTap 服务端会根据该 userIdentifier 上次的认证结果结合当前时间段直接进行返回认证结果，省去姓名和身份证号的输入。所以，不同的玩家，这里的唯一标识应该要保持不同。
+无论采用哪种方式进行实名认证，调用的接口中有个参数需要额外注意下，**userIdentifier：玩家的唯一标识**。如果第一次认证后，紧接着进行第二次认证，userIdentifier 值没有改变的话，TapTap 服务端会根据该 userIdentifier 上次的认证结果结合当前时间段直接返回认证结果，省去姓名和身份证号的输入。所以，不同的玩家，这里的唯一标识应该要保持不同。
 
-有的开发者可能会将该参数赋值为获取到的设备唯一标识，但是真的不太建议这样操作，因为安卓碎片化较为严重，玩家不同意获取设备信息权限等因素可能导致获取到的设备唯一标识为空，从而导致 userIdentifier 为空，如果代码不够健壮，非空判定比较少，结果就会无法正常使用实名认证功能。具体的异常可能是：
+有的开发者可能会将该参数赋值为获取到的设备唯一标识，但是真的不太建议这样操作，因为安卓碎片化较为严重，玩家不同意获取设备信息权限等因素可能导致获取到的设备唯一标识为空，从而导致 userIdentifier 为空。如果代码不够健壮，非空判定比较少，结果就会是无法正常使用实名认证功能。具体的异常可能是：
 ![](/post-images/tap_antidiction_02.jpg)
 
 移动端界面可能会看到如下异常提示：
@@ -152,7 +152,7 @@ AntiAddictionUIKit.LeaveGame();
 仅允许未成年人在周五、周六、周日和法定节假日的 20:00 至 21:00 进行游戏。非允许游戏时间段内，SDK 封装的相应逻辑会被触发，弹出提示框提醒未成年无法继续游戏。此时的未成年玩家最多有两种选择：「退出游戏」或者「切换账号」。
 ![](/post-images/tap_antidiction_04.png)
 
-如果初始化 SDK 时设置的一个参数 showSwitchAccount 为 false (表示不显示「切换账号」按钮)，那此时的未成年玩家只能选择「退出游戏」了。
+如果初始化 SDK 时设置的一个参数 showSwitchAccount 为 false（表示不显示「切换账号」按钮），那此时的未成年玩家只能选择「退出游戏」了。
 ```csharp
 // 是否显示切换账号按钮
 bool showSwitchAccount = false;
