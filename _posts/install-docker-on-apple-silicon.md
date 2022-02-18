@@ -26,7 +26,17 @@ Docker for Mac 确实很好，除了解决新架构带来的问题之外它还�
 之前在 Intel Mac 上，我们会用 Vagrant 或 minikube 来创建虚拟机，它们底层会使用 VirtualBox 或 HyperKit 来完成实际的虚拟化。但 VirtualBox 和 HyperKit 都没有支持 Apple Silicon 的计划。实际上目前开源的虚拟化方案中只有 QEMU 对 Apple Silicon 有比较好的支持，QEMU 本身只提供命令行的接口，例如 Docker for Mac 调用 QEMU 时的命令行参数是这样：
 
 ```
-/Applications/Docker.app/Contents/MacOS/qemu-system-aarch64 -accel hvf -cpu host -machine virt,highmem=off -m 2048 -smp 5 -kernel /Applications/Docker.app/Contents/Resources/linuxkit/kernel -append linuxkit.unified_cgroup_hierarchy=1 page_poison=1 vsyscall=emulate panic=1 nospec_store_bypass_disable noibrs noibpb no_stf_barrier mitigations=off   vpnkit.connect=tcp+bootstrap+client://192.168.65.2:61473/f1c4db329a4a520d73a79eaa1360de7be7d09948a1ac348b04c8e01f6f6eb2c9 console=ttyAMA0 -initrd /Applications/Docker.app/Contents/Resources/linuxkit/initrd.img -serial pipe:/var/folders/12/_bbrd4692hv8r9bx_ggw5kp80000gn/T/qemu-console1367481183/fifo -drive if=none,file=/Users/ziting/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw,format=raw,id=hd0 -device virtio-blk-pci,drive=hd0,serial=dummyserial -netdev socket,id=net1,fd=3 -device virtio-net-device,netdev=net1,mac=02:50:00:00:00:01 -vga none -nographic -monitor none
+/Applications/Docker.app/Contents/MacOS/qemu-system-aarch64 -accel hvf \
+-cpu host -machine virt,highmem=off -m 2048 -smp 5 \
+-kernel /Applications/Docker.app/Contents/Resources/linuxkit/kernel \
+-append linuxkit.unified_cgroup_hierarchy=1 page_poison=1 vsyscall=emulate \
+panic=1 nospec_store_bypass_disable noibrs noibpb no_stf_barrier mitigations=off \
+vpnkit.connect=tcp+bootstrap+client://192.168.65.2:61473/f1c4db329a4a520d73a79eaa1360de7be7d09948a1ac348b04c8e01f6f6eb2c9 \
+console=ttyAMA0 -initrd /Applications/Docker.app/Contents/Resources/linuxkit/initrd.img \
+-serial pipe:/var/folders/12/_bbrd4692hv8r9bx_ggw5kp80000gn/T/qemu-console1367481183/fifo \
+-drive if=none,file=/Users/ziting/Library/Containers/com.docker.docker/Data/vms/0/data/Docker.raw,format=raw,id=hd0 \
+-device virtio-blk-pci,drive=hd0,serial=dummyserial -netdev socket,id=net1,fd=3 -device virtio-net-device,netdev=net1,mac=02:50:00:00:00:01 \
+-vga none -nographic -monitor none
 ```
 
 为了实际使用 QEMU 进行开发，我们需要一个使用上更友好的封装，能够自动配置好 Docker 和 Kubernetes（或者至少方便编写像 Vagrantfile 一样的脚本），提供类似 Docker for Mac 的网络映射和文件映射，于是我找到了 Lima。
