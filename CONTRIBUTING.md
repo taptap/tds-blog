@@ -166,13 +166,13 @@ PR 标题 GitHub 会自动填写，如果不满意，可以修改一下。
 
 ## Tips
 
-Confluence wiki 等网页上的富文本内容，可以复制到 [StackEdit] （免费） 或 [Typora]（收费），可以快速转换为 markdown 代码。
+Confluence wiki、Notion 等网页上的富文本内容，可以复制到 [Mark Text]（开源，推荐使用）、[Typora]（收费）、[StackEdit] （开源，可以在浏览器中直接使用，但对一些复杂格式的支持不如 Mark Text 和 Typora 全）可以快速转换为 markdown 代码。
 注意，部分格式转换时会丢失或错误，需要手工修正。
 
+[Mark Text]: https://marktext.app
 [StackEdit]: https://stackedit.io/app
 [Typora]: https://typora.io
 
 命令行工具 [pandoc] 支持转换多种文件为 markdown，同样，部分格式转换时会丢失或错误，需要手工修正。
 
 [pandoc]: https://pandoc.org/index.html
-
