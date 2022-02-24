@@ -4,10 +4,16 @@ import Header from "../components/header";
 
 import { getAllPosts } from "../lib/api";
 import { generateFeed } from "../lib/feed";
+import { getAuthors } from "../lib/data";
 import styles from "../styles/posts.module.scss";
 import heroImage from "../public/photos/3.jpg";
 
-export default function Posts({ posts }) {
+export default function Posts({ posts, authors }) {
+  const getAuthor = (authorId) =>
+    authors.find((author) => author.id === authorId);
+  const getAuthorField = (authorId, field) =>
+    field in getAuthor(authorId) ? getAuthor(authorId)[field] : null;
+
   return (
     <>
       <Header>
@@ -44,7 +50,10 @@ export default function Posts({ posts }) {
                         <article className={styles.small}>
                           <h3>{post.title}</h3>
                           <p>{post.excerpt}</p>
-                          <time dateTime={post.date}>{prettyDate}</time>
+                          <p className={styles.metadata}>
+                            {getAuthorField(post.author, "name") || post.author}{" "}
+                            · <time dateTime={post.date}>{prettyDate}</time>
+                          </p>
                         </article>
                       </a>
                     </Link>
@@ -62,9 +71,13 @@ export default function Posts({ posts }) {
 export function getStaticProps() {
   const posts = getAllPosts();
   generateFeed(posts);
+
+  const authors = getAuthors();
+
   return {
     props: {
       posts,
+      authors,
     },
   };
 }
