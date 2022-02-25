@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Header from "../../components/header";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
+import { getAuthors } from "../../lib/data";
 import styles from "../../styles/post.module.scss";
+import Image from "next/image";
+import enterIcon from "../../public/icons/enter.svg";
 
 const getSocialImageURL = (post) => {
   const BASE_URL = "https://blog.taptap.dev/";
@@ -15,8 +18,37 @@ const getSocialImageURL = (post) => {
   return `${BASE_URL}tap-icon.png`;
 };
 
-export default function Post({ post }) {
+export default function Post({ post, authors }) {
+  const getAuthor = (authorId) =>
+    authors.find((author) => author.id === authorId);
+  const author = getAuthor(post.author) || {};
   const prettyDate = new Date(post.date).toLocaleDateString("zh-CN");
+
+  const AuthorPanel = () =>
+    author.url ? (
+      <a href={author.url} target="_blank" rel="noreferrer">
+        <div className={styles.authorPanel}>
+          <p>
+            <span className={styles.name}>{author.name || post.author}</span>
+            {author.bio && (
+              <>
+                {" "}
+                · <span className={styles.bio}>{author.bio}</span>
+              </>
+            )}
+          </p>
+          <p className={styles.url}>
+            访问作者网站{" "}
+            <Image
+              src={enterIcon}
+              alt="Open"
+              objectFit="contain"
+              priority="true"
+            />
+          </p>
+        </div>
+      </a>
+    ) : null;
 
   return (
     <>
@@ -33,7 +65,8 @@ export default function Post({ post }) {
 
       <Header post={post}>
         <div className={styles.heroContent}>
-          <p>
+          <p className={styles.metadata}>
+            {author.name || post.author} ·{" "}
             <time dateTime={post.date}>{prettyDate}</time>
           </p>
 
@@ -46,6 +79,8 @@ export default function Post({ post }) {
           <div className={styles.content}>
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
           </div>
+
+          <AuthorPanel />
         </main>
       </div>
     </>
@@ -55,11 +90,12 @@ export default function Post({ post }) {
 export async function getStaticProps({ params }) {
   const post = await getPostBySlug(params.slug);
 
+  const authors = getAuthors();
+
   return {
     props: {
-      post: {
-        ...post,
-      },
+      post,
+      authors,
     },
   };
 }
