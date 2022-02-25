@@ -9,11 +9,6 @@ import styles from "../styles/posts.module.scss";
 import heroImage from "../public/photos/3.jpg";
 
 export default function Posts({ posts, authors }) {
-  const getAuthor = (authorId) =>
-    authors.find((author) => author.id === authorId);
-  const getAuthorField = (authorId, field) =>
-    field in getAuthor(authorId) ? getAuthor(authorId)[field] : null;
-
   return (
     <>
       <Header>
@@ -40,6 +35,9 @@ export default function Posts({ posts, authors }) {
 
               <div className={`${styles.list} ${styles.large}`}>
                 {posts.map((post) => {
+                  const getAuthor = (authorId) =>
+                    authors.find((author) => author.id === authorId);
+                  const author = getAuthor(post.author) || {};
                   const prettyDate = new Date(post.date).toLocaleDateString(
                     "zh-CN"
                   );
@@ -51,8 +49,8 @@ export default function Posts({ posts, authors }) {
                           <h3>{post.title}</h3>
                           <p>{post.excerpt}</p>
                           <p className={styles.metadata}>
-                            {getAuthorField(post.author, "name") || post.author}{" "}
-                            · <time dateTime={post.date}>{prettyDate}</time>
+                            {author.name || post.author} ·{" "}
+                            <time dateTime={post.date}>{prettyDate}</time>
                           </p>
                         </article>
                       </a>

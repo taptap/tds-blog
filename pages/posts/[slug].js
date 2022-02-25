@@ -21,29 +21,19 @@ const getSocialImageURL = (post) => {
 export default function Post({ post, authors }) {
   const getAuthor = (authorId) =>
     authors.find((author) => author.id === authorId);
-  const getAuthorField = (authorId, field) =>
-    field in getAuthor(authorId) ? getAuthor(authorId)[field] : null;
+  const author = getAuthor(post.author) || {};
   const prettyDate = new Date(post.date).toLocaleDateString("zh-CN");
 
-  const AuthorPanel = ({ authorId }) =>
-    getAuthorField(authorId, "url") && (
-      <a
-        href={getAuthorField(authorId, "url")}
-        target="_blank"
-        rel="noreferrer"
-      >
+  const AuthorPanel = () =>
+    author.url ? (
+      <a href={author.url} target="_blank" rel="noreferrer">
         <div className={styles.authorPanel}>
           <p>
-            <span className={styles.name}>
-              {getAuthorField(post.author, "name") || post.author}
-            </span>
-            {getAuthorField(post.author, "bio") && (
+            <span className={styles.name}>{author.name || post.author}</span>
+            {author.bio && (
               <>
                 {" "}
-                ·{" "}
-                <span className={styles.bio}>
-                  {getAuthorField(post.author, "bio")}
-                </span>
+                · <span className={styles.bio}>{author.bio}</span>
               </>
             )}
           </p>
@@ -58,7 +48,7 @@ export default function Post({ post, authors }) {
           </p>
         </div>
       </a>
-    );
+    ) : null;
 
   return (
     <>
@@ -76,7 +66,7 @@ export default function Post({ post, authors }) {
       <Header post={post}>
         <div className={styles.heroContent}>
           <p className={styles.metadata}>
-            {getAuthorField(post.author, "name") || post.author} ·{" "}
+            {author.name || post.author} ·{" "}
             <time dateTime={post.date}>{prettyDate}</time>
           </p>
 
@@ -90,7 +80,7 @@ export default function Post({ post, authors }) {
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
           </div>
 
-          <AuthorPanel authorId={post.author} />
+          <AuthorPanel />
         </main>
       </div>
     </>
