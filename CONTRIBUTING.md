@@ -53,11 +53,11 @@ markdown 内容
 
 在[博客的 GitHub 仓库页面][repo]点击右上角的「Fork」图标，fork 本仓库。
 
-![fork](images/github-fork.png)
+![fork](public/post-images/github-fork.png)
 
 如果之前没有 fork 过，会 fork 一个新仓库；如果之前已经 fork 过，会提示你的 fork 的地址：
 
-![already forked](images/forked.png)
+![already forked](public/post-images/forked.png)
 
 
 
@@ -74,7 +74,7 @@ markdown 内容
 
 1. 点击「文件」图标，在左栏点击 `_posts` 旁的箭头可展开文件夹，之后在鼠标悬浮到 EXPLORER 右侧的 `...` 的下方，会出现四个图标，点击最左侧的「New File」文件即可新增文件。
 
-    ![new file](images/new-file.png)
+    ![new file](public/post-images/new-file.png)
     
 2. 文件名会成为 URL 的一部分，因此请使用小写英文字母、数字、连字符（`-`），例如 `taptap-design-system.md`，发布后的 URL 是 https://blog.taptap.dev/posts/taptap-design-system
 
@@ -94,7 +94,7 @@ markdown 内容
 
 4. 右上角有三个图标，最左侧的图标可以分栏显示预览，可以实时预览 markdown 的渲染效果（仅供参考，部分格式预览效果不一定准确）
 
-    ![preview](images/preview.png)
+    ![preview](public/post-images/preview.png)
 
 5. 如果需要添加图片，依次点击 public -> post-images 左侧的箭头，展开文件夹后，直接把图片拖过去即可上传。
 
@@ -102,7 +102,7 @@ markdown 内容
     - 图片不要和已有的图片重名，除非你想更新现有的图片。
 
     
-    ![images](images/images.png)
+    ![images](public/post-images/images.png)
 
 6. 上传图片后，在 markdown 文件中通过以下 markdown 语法引用图片：
 
@@ -117,7 +117,7 @@ markdown 内容
 
 最后在 Source Control 面板看一下变动情况，没问题的话就**点击 Changes 右侧的加号，让改动进入 Staged Changes**.
 
-![stage](images/stage.png)
+![stage](public/post-images/stage.png)
 
 最后在上面的 Message 文本框写一下 Commit Message，简单说明下做了什么改动。
 大多数情况下，用一句话简短描述改动内容即可。
@@ -131,15 +131,15 @@ markdown 内容
 
 按 Ctrl/Command + Enter 即可提交。
 
-![commit](images/commit.png)
+![commit](public/post-images/commit.png)
 
 提交后访问 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/pulls （请替换 URL 中的用户名）
 
-![new pull request](images/new-pull-request.png)
+![new pull request](public/post-images/new-pull-request.png)
 
 在 Pull Requests 页面点击右上方绿色的 New pull request 按钮，会显示你所做的改动。
 
-![compare changes](images/compare-changes.png)
+![compare changes](public/post-images/compare-changes.png)
 
 大致看一下有没有问题，如果有问题的话，就关闭页面，重新回到 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/ 按 `.` 进入编辑模式再修改。
 
@@ -147,13 +147,13 @@ markdown 内容
 PR 标题 GitHub 会自动填写，如果不满意，可以修改一下。
 右方 Reviewer 选择 weakish 或 fuchenshi，然后再点绿色的 Create pull request 按钮提交。
 
-![open a pull request](images/open-a-pr.png)
+![open a pull request](public/post-images/open-a-pr.png)
 
 提交后 CI 会自动构建博客预览，请稍候。
 预览构建完成后，机器人 netlify bot 的回复中会出现「😎 Browse the preview: 」，点击后面的 URL 即可查看效果。
 不同于 GitHub 编辑模式自动的预览，这个是真正的预览，未来发布后，线上显示的效果和预览一模一样，包括各种格式和图片。
 
-![ci](images/ci.png)
+![ci](public/post-images/ci.png)
 
 上图中，「All checks have passed」标明预览构建成功。
 红色的「Review required」是表示 reviewer 还没有 approve，属正常现象，不是构建错误，不必惊慌。
