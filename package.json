@@ -2,9 +2,8 @@
   "name": "tds-blog",
   "private": true,
   "scripts": {
-    "predev": "mv post-images public/post-images",
+    "predev": "rm -rf public/post-image && cp -r post-images public/post-images",
     "dev": "next dev",
-    "postdev": "mv public/post-images post-images",
     "prebuild": "rm -rf public/post-image && cp -r post-images public/post-images",
     "build": "next build",
     "start": "next start",
