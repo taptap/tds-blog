@@ -2,8 +2,12 @@
   "name": "tds-blog",
   "private": true,
   "scripts": {
+    "predev": "mv post-images public/post-images",
     "dev": "next dev",
+    "postdev": "mv public/post-images post-images",
+    "prebuild": "mv post-images public/post-images",
     "build": "next build",
+    "postbuild": "mv public/post-images post-images",
     "start": "next start",
     "lint": "next lint"
   },
