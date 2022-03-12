@@ -26,7 +26,7 @@ author: "TDS"
 
 ![](/post-images/bb.png)
 
-![](/post-images/dsc6918.jpg)
+![](/post-images/dsc_6918.jpg)
 
 （TDS 产品经理 卫凯灵）
 
