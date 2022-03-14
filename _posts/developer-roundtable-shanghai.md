@@ -12,7 +12,7 @@ author: "TDS"
 以下为演讲实录：
 
 ![](/post-images/aa.png)
-![](/post-images/yzp.png)
+![](/post-images/yzp.jpg)
 
 （TDS 运营负责人苑志鹏）
 
