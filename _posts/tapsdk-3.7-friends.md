@@ -20,7 +20,7 @@ TDS 提供关注模式下的黑名单功能，支持「查询黑名单列表」�
 
 **🚪文档传送门**
 
-功能介绍：https://developer.taptap.com/docs/sdk/friends/features/
-开发文档：https://developer.taptap.com/docs/sdk/friends/mutual/
+功能介绍：https://developer.taptap.com/docs/sdk/friends/features/ <br />
+开发文档：https://developer.taptap.com/docs/sdk/friends/guide/
 
 若您有任何疑问或咨询，欢迎前往 **「开发者中心—工单」** 联系我们！
