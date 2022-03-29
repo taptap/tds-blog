@@ -17,7 +17,7 @@
 
 所有博客文章都在 `_posts` 路径下： https://github.com/taptap/tds-blog/tree/main/_posts
 
-所有博客文章用到的图片放在 `public/post-images` 下： https://github.com/taptap/tds-blog/tree/main/public/post-images
+所有博客文章用到的图片放在 `post-images` 下： https://github.com/taptap/tds-blog/tree/main/post-images
 
 博客文章使用 [markdown] 语法，文章开头的 front matter 通过 [YAML] 指定文章的元数据（标题、发布日期、摘要等）。
 文件名会成为 URL 的一部分，因此请使用小写英文字母、数字、连字符（`-`），例如 `taptap-design-system.md`。
