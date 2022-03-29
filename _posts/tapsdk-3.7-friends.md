@@ -1,3 +1,10 @@
+---
+title: "TapSDK 3.7 版本更新公告"
+excerpt: "TapSDK 3.7 正式发布，好友模块新增黑名单功能"
+date: "2022-03-29"
+author: YIFEI TENG
+---
+
 亲爱的开发者们，TapSDK 发布 3.7 版本啦！本次带来 3 个好友新增功能
 
 ⭐ **黑名单功能**
