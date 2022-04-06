@@ -33,7 +33,7 @@ TDS 客服工单模块，作为玩家反馈问题的收集容器，加强开发�
 
 ![选择工单分类](/post-images/tapsdk-3.3-support-anti-addiction/1.png)
 
-![工单回复](/post-imagestapsdk-3.3-support-anti-addiction/2.png)
+![工单回复](/post-images/tapsdk-3.3-support-anti-addiction/2.png)
 
 ## 实名认证和防沉迷
 
