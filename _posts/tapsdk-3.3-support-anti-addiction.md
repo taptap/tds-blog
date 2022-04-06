@@ -31,9 +31,9 @@ TDS 客服工单模块，作为玩家反馈问题的收集容器，加强开发�
 
 想参与测试的开发者需通过「开发者中心」-「工单」提交申请，申请通过后可在测试期间免费试用。
 
-![选择工单分类](/post-images/96a28e0e5de2ee454ea58447dd4ad297.png)
+![选择工单分类](/post-images/tapsdk-3.3-support-anti-addiction/1.png)
 
-![工单回复](/post-images/051283d473d1fea7a14928b84617cdc2.png)
+![工单回复](/post-imagestapsdk-3.3-support-anti-addiction/2.png)
 
 ## 实名认证和防沉迷
 
@@ -44,8 +44,8 @@ TDS 客服工单模块，作为玩家反馈问题的收集容器，加强开发�
 
 接入文档可参考：https://developer.taptap.com/docs/sdk/anti-addiction/features/
 
-![快速认证](/post-images/3d360a035d2bab0f1efe5b14db2c61df.png)
+![快速认证](/post-images/tapsdk-3.3-support-anti-addiction/3.png)
 
-![手动填写实名信息](/post-images/65d42e7704451003b169036e3682cb79.png)
+![手动填写实名信息](/post-images/tapsdk-3.3-support-anti-addiction/4.png)
 
-![游戏健康提醒](/post-images/4ad9edf25754e610c6c24d9fed326d3a.png)
+![游戏健康提醒](/post-images/tapsdk-3.3-support-anti-addiction/5.png)

@@ -53,13 +53,11 @@ markdown 内容
 
 在[博客的 GitHub 仓库页面][repo]点击右上角的「Fork」图标，fork 本仓库。
 
-![fork](post-images/github-fork.png)
+![fork](post-images/CONTRIBUTING/github-fork.png)
 
 如果之前没有 fork 过，会 fork 一个新仓库；如果之前已经 fork 过，会提示你的 fork 的地址：
 
-![already forked](post-images/forked.png)
-
-
+![already forked](post-images/CONTRIBUTING/forked.png)
 
 **在你 fork 的仓库页面**， 按下 `.` （英文句号），即可进入 GitHub 的编辑模式。
 
@@ -72,13 +70,13 @@ markdown 内容
 
 最左侧由上往下的图标依次是菜单、文件、查找、源码控制等功能。
 
-1. 点击「文件」图标，在左栏点击 `_posts` 旁的箭头可展开文件夹，之后在鼠标悬浮到 EXPLORER 右侧的 `...` 的下方，会出现四个图标，点击最左侧的「New File」文件即可新增文件。
+1.  点击「文件」图标，在左栏点击 `_posts` 旁的箭头可展开文件夹，之后在鼠标悬浮到 EXPLORER 右侧的 `...` 的下方，会出现四个图标，点击最左侧的「New File」文件即可新增文件。
 
-    ![new file](post-images/new-file.png)
-    
-2. 文件名会成为 URL 的一部分，因此请使用小写英文字母、数字、连字符（`-`），例如 `taptap-design-system.md`，发布后的 URL 是 https://blog.taptap.dev/posts/taptap-design-system
+    ![new file](post-images/CONTRIBUTING/new-file.png)
 
-3. markdown 文件开头是 [YAML] front matter，指定博客文章的元信息，注意 YAML 区域上下分别用三个短横 `---` 隔开，其中用到的短横、冒号、引号都是英文半角标点，`YYYY-MM-DD`是文章发布的日期，比如 `1970-01-01`。
+2.  文件名会成为 URL 的一部分，因此请使用小写英文字母、数字、连字符（`-`），例如 `taptap-design-system.md`，发布后的 URL 是 https://blog.taptap.dev/posts/taptap-design-system
+
+3.  markdown 文件开头是 [YAML] front matter，指定博客文章的元信息，注意 YAML 区域上下分别用三个短横 `---` 隔开，其中用到的短横、冒号、引号都是英文半角标点，`YYYY-MM-DD`是文章发布的日期，比如 `1970-01-01`。
 
     ```markdown
     ---
@@ -91,31 +89,29 @@ markdown 内容
     markdown 内容
     ```
 
+4.  右上角有三个图标，最左侧的图标可以分栏显示预览，可以实时预览 markdown 的渲染效果（仅供参考，部分格式预览效果不一定准确）
 
-4. 右上角有三个图标，最左侧的图标可以分栏显示预览，可以实时预览 markdown 的渲染效果（仅供参考，部分格式预览效果不一定准确）
+    ![preview](post-images/CONTRIBUTING/preview.png)
 
-    ![preview](post-images/preview.png)
-
-5. 如果需要添加图片，依次点击 post-images 左侧的箭头，展开文件夹后，直接把图片拖过去即可上传。
+5.  如果需要添加图片，依次点击 post-images 左侧的箭头，展开文件夹后，直接把图片拖过去即可上传。
 
     - 图片的命名也请使用小写英文字母、数字、连字符（`-`），**不要包含空格**（URL 中空格需要转义，如果文件名包含空格，后续 markdown 里引用图片的时候还要转义空格，比较麻烦，而且万一忘了转义图片就无法显示。图片文件名不用空格就可以避免这些烦心事）。
     - 图片不要和已有的图片重名，除非你想更新现有的图片。
 
-    
-    ![images](post-images/images.png)
+    ![images](post-images/CONTRIBUTING/images.png)
 
-6. 上传图片后，在 markdown 文件中通过以下 markdown 语法引用图片：
+6.  上传图片后，在 markdown 文件中通过以下 markdown 语法引用图片：
 
         ![图片的文字描述](post-images/image-name.png)
 
-    注意，和其他 markdown 标记一样，这里的符号 ![] /  都是英文半角符号。
+    注意，和其他 markdown 标记一样，这里的符号 ![] / 都是英文半角符号。
     方框号内是「图片的文字描述」，用于盲人、在浏览器中选择不加载图片（网速极慢或流量极贵）等场景，因为这样的场景比较罕见，所以也可以偷懒不填。
 
 ### 提交
 
 最后在 Source Control 面板看一下变动情况，没问题的话就**点击 Changes 右侧的加号，让改动进入 Staged Changes**.
 
-![stage](post-images/stage.png)
+![stage](post-images/CONTRIBUTING/stage.png)
 
 最后在上面的 Message 文本框写一下 Commit Message，简单说明下做了什么改动。
 大多数情况下，用一句话简短描述改动内容即可。
@@ -129,15 +125,15 @@ markdown 内容
 
 按 Ctrl/Command + Enter 即可提交。
 
-![commit](post-images/commit.png)
+![commit](post-images/CONTRIBUTING/commit.png)
 
 提交后访问 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/pulls （请替换 URL 中的用户名）
 
-![new pull request](post-images/new-pull-request.png)
+![new pull request](post-images/CONTRIBUTING/new-pull-request.png)
 
 在 Pull Requests 页面点击右上方绿色的 New pull request 按钮，会显示你所做的改动。
 
-![compare changes](post-images/compare-changes.png)
+![compare changes](post-images/CONTRIBUTING/compare-changes.png)
 
 大致看一下有没有问题，如果有问题的话，就关闭页面，重新回到 https://github.com/YOUR-GITHUB-USERNAME/tds-blog/ 按 `.` 进入编辑模式再修改。
 
@@ -145,13 +141,13 @@ markdown 内容
 PR 标题 GitHub 会自动填写，如果不满意，可以修改一下。
 右方 Reviewer 选择 weakish 或 fuchenshi，然后再点绿色的 Create pull request 按钮提交。
 
-![open a pull request](post-images/open-a-pr.png)
+![open a pull request](post-images/CONTRIBUTING/open-a-pr.png)
 
 提交后 CI 会自动构建博客预览，请稍候。
 预览构建完成后，机器人 netlify bot 的回复中会出现「😎 Browse the preview: 」，点击后面的 URL 即可查看效果。
 不同于 GitHub 编辑模式自动的预览，这个是真正的预览，未来发布后，线上显示的效果和预览一模一样，包括各种格式和图片。
 
-![ci](post-images/ci.png)
+![ci](post-images/CONTRIBUTING/ci.png)
 
 上图中，「All checks have passed」标明预览构建成功。
 红色的「Review required」是表示 reviewer 还没有 approve，属正常现象，不是构建错误，不必惊慌。
