@@ -29,7 +29,7 @@ B 端产品通常有较长的产研周期，多平台合作，业务复杂并发
 ### 热度
 
 <figure>
-    <img alt="design system google trends" src="/post-images/trends.png">
+    <img alt="design system google trends" src="/post-images/taptap-design-system/trends.png">
     <figcaption>Google Trends 搜索「design system」显示结果</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ B 端产品通常有较长的产研周期，多平台合作，业务复杂并发
 没有绝对完美的设计系统，站在体验者的角度向我们提出反馈，挖掘更多**设计可能性**，驱动我们变得更好。
 
 <figure>
-    <img alt="持续性、韧性、可能性" src="/post-images/philosophy.png">
+    <img alt="持续性、韧性、可能性" src="/post-images/taptap-design-system/philosophy.png">
     <figcaption>我们的愿景</figcaption>
 </figure>
 
@@ -80,15 +80,15 @@ B 端产品通常有较长的产研周期，多平台合作，业务复杂并发
 
 通过小颗粒元素组合大颗粒元素的逐层嵌套，构成了我们现在组件库中的各个元素，覆盖了 38 种组件类型和 1000 多种组件状态。
 
-![组件类型](/post-images/various-components.gif)
-![组件概览](/post-images/overview.gif)
+![组件类型](/post-images/taptap-design-system/various-components.gif)
+![组件概览](/post-images/taptap-design-system/overview.gif)
 
 #### 在线即可体验的交互效果
 
 我们为大部分组件制作了交互演示，可以帮助用户**在线体验与理解组件**。
 
 <figure>
-    <img alt="交互演示" src="/post-images/interactive-demo.gif">
+    <img alt="交互演示" src="/post-images/taptap-design-system/interactive-demo.gif">
     <figcaption>Interactive demo</figcaption>
 </figure>
 
@@ -97,7 +97,7 @@ B 端产品通常有较长的产研周期，多平台合作，业务复杂并发
 我们提供了部分可重复使用的交互元素，使用户能够更轻松地使用我们的设计系统，构建可交互原型图，**减少原型制作时间**。
 
 <figure>
-    <img alt="交互组件" src="/post-images/interactive-components.png">
+    <img alt="交互组件" src="/post-images/taptap-design-system/interactive-components.png">
     <figcaption>Interactive components</figcaption>
 </figure>
 
@@ -106,18 +106,18 @@ B 端产品通常有较长的产研周期，多平台合作，业务复杂并发
 1. **Duplicate**「TapTap Design System ｜ Developers」资源，并 **Publish** 为共享组件库
 
 <figure>
-    <img alt="duplicate" src="/post-images/duplicate.png">
+    <img alt="duplicate" src="/post-images/taptap-design-system/duplicate.png">
     <figcaption>将 TapTap Design System｜Developers 组件库资源复制到你的<strong>团队</strong>项目中</figcaption>
 </figure>
 <figure>
-    <img alt="publish" src="/post-images/publish.png">
+    <img alt="publish" src="/post-images/taptap-design-system/publish.png">
     <figcaption>使用团队账号，发布为公共组件库</figcaption>
 </figure>
 
 2. 调用 UI 组件的时候，可在侧边的工具栏内，切换样式与变量
 
 <figure>
-    <img alt="切换样式与变量" src="/post-images/variant.png">
+    <img alt="切换样式与变量" src="/post-images/taptap-design-system/variant.png">
     <figcaption>可在使用侧灵活切换实例/变量</figcaption>
 </figure>
 
@@ -135,7 +135,7 @@ TapTap 游戏开发者产品，在 TapTap 品牌规范下，保持品牌调性�
 
 产品业务繁杂，开发者众多，设计系统在促进研发效率的同时，兼顾用户体验，有效提高业务平台的使用效率。
 
-![TapTap 开发者中心](/post-images/taptap-developer-center.png)
+![TapTap 开发者中心](/post-images/taptap-design-system/taptap-developer-center.png)
 
 #### TapDB 数据分析
 
@@ -145,14 +145,14 @@ TapTap 游戏开发者产品，在 TapTap 品牌规范下，保持品牌调性�
 
 支持**设计师创造自定义主题**，我们开源了足够丰富的设计资产，设计师可以更改变量，在一定的规则下，自由创造主题，既能照顾业务特性，又能满足多样化的视觉需求。
 
-![TapDB](/post-images/tapdb.png)
+![TapDB](/post-images/taptap-design-system/tapdb.png)
 
 ### 百变主题案例
 
 使用 TapTap Design System ｜ Developers 灵活丰富的组件资源，可以快速配置出适合多种业务的个性化主题，助力您的产品体验。
 
 <figure>
-    <img alt="个性化主题" src="/post-images/theme.png">
+    <img alt="个性化主题" src="/post-images/taptap-design-system/theme.png">
     <figcaption>Templates</figcaption>
 </figure>
 
@@ -174,7 +174,7 @@ Figma 官方社区：[Figma Community](https://www.figma.com/community/design_sy
 
 也可以在社区首页 Explore 和顶部分类榜，近期热门里找到我们啦～
 
-![Figma 社区热门文件](/post-images/trending.png)
+![Figma 社区热门文件](/post-images/taptap-design-system/trending.png)
 
 ## 积极共建
 
