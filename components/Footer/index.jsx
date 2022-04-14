@@ -92,13 +92,11 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <a
-                        href="https://career.taptap.dev"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <h3>加入我们</h3>
-                      </a>
+                      <Link href="/career">
+                        <a>
+                          <h3>加入我们</h3>
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
