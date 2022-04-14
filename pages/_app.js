@@ -1,8 +1,10 @@
 import Head from "next/head";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 import posthog from "posthog-js";
 
 import "../styles/globals.scss";
+import "react-slideshow-image/dist/styles.css";
+import "../styles/slideshow.css";
 
 function MyApp({ Component, pageProps }) {
   if (typeof window !== "undefined") {

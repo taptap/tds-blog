@@ -1,0 +1,93 @@
+- title: 后端工程师
+  slug: backend-engineer
+  requirements:
+    - 熟悉常用数据结构及算法，理解时间复杂度等基本概念。
+    - 我们后端开发使用的语言主要包括 Go, Clojure, Java, JavaScript/TypeScript(Node.js)，需要精通其中一种或几种，并有快速学习新知识的能力和动力。
+    - 了解后端开发涉及的常见网络协议和 RPC 协议
+    - 有开发复杂后端系统的经验，熟悉各类开源中间件和工具。
+    - 有优秀的学习、沟通、协作能力
+    - 具备良好的自我管理能力和工作习惯，在无需监督的情况下能保持高水平的工作效率
+    - 工作地点：上海/北京
+  responsibilities:
+    - 参与后端系统的开发和维护
+    - 参与新产品后端系统的开发
+    - 与运维同事协作改进后端系统监控及响应线上事故
+
+- title: Unity 平台工程师
+  slug: unity-engineer
+  requirements:
+    - 技术基础扎实，熟悉常用数据结构与算法
+    - 熟悉 C# 语言和 Unity 游戏引擎
+    - 有使用 Unity 开发 iOS 或 Android 游戏的经验
+    - 熟悉常用网络协议栈（UDP、TCP/IP、HTTP）并有相关开发经验
+    - 有优秀的学习、沟通、协作能力
+    - 具备良好的自我管理能力和工作习惯，在无需监督的情况下能保持高水平的工作效率
+    - 工作地点：上海/北京
+  responsibilities:
+    - 负责 Unity SDK 的开发和维护
+    - 参与相关的产品决策
+
+- title: Unreal Engine 工程师
+  slug: unreal-engineer
+  requirements:
+    - 技术基础扎实，熟悉常用数据结构与算法
+    - 熟悉 C++ 语言和 Unreal 游戏引擎
+    - 有使用 Unreal 开发 iOS 或 Android 游戏的经验
+    - 熟悉常用网络协议栈（UDP、TCP/IP、HTTP）并有相关开发经验
+    - 有优秀的学习、沟通、协作能力
+    - 具备良好的自我管理能力和工作习惯，在无需监督的情况下能保持高水平的工作效率
+    - 工作地点：上海/北京
+  responsibilities:
+    - 负责 Unreal Engine SDK 的开发和维护
+    - 参与相关的产品决策
+
+- title: 资深 SRE 工程师/负责人
+  slug: ops-engineer
+  requirements:
+    - 有丰富的复杂线上系统的运维经验，有较强的问题分析排查能力
+    - 善于使用合适的语言和工具对流程进行自动化
+    - 深入了解 Linux 的配置调整、性能调优，熟悉其网络协议栈
+    - 熟悉容器技术、有容器编排系统使用经验，了解容器组网技术
+    - 有 Kubernetes、MongoDB、ELK、Hadoop(CDH)、Nginx 等系统的部署和维护经验
+    - 工作地点：上海/北京
+  bonuses:
+    - 开发过基于 Openresty 的富逻辑负载均衡组件
+    - 熟悉 Kubernetes 的部署及其网络配置，进行过相关的二次开发
+  responsibilities:
+    - 在运维和研发团队中推进 SRE、DevOps 方面的最佳实践
+    - 响应线上事故，参与 on-call 轮值
+    - 改进运维、监控体系，提高自动化程度
+    - 改进业务和基础设施的可控性，包括可用性、安全性、成本和可维护性
+
+- title: 技术支持工程师
+  slug: tech-support
+  requirements:
+    - 有良好的程序设计功底和经验
+    - 熟练掌握至少一种程序设计语言
+    - 性格和善，能与不同类型的人耐心交流
+    - 有优秀的书面和口头沟通能力
+    - 有优秀的学习、总结、协作能力
+    - 工作地点：上海/北京
+  bonuses:
+    - 有移动开发的经验
+  responsibilities:
+    - 为客户提供咨询和技术支持
+    - 与其他工程师一起改进技术支持系统
+    - 协助改进文档和 demo，为研发团队提供有效的用户反馈
+    - 成为用户与产品团队之间的桥梁，及时归纳整理能指导产品和服务改进的信息
+
+- title: QA 工程师
+  slug: qa-engineer
+  requirements:
+    - 2~3 年测试开发或自动化测试经验
+    - 熟练掌握软件测试的理论和方法，能制定系统的测试方案
+    - 熟练掌握至少一门主流编程语言
+    - 熟练掌握主流的自动化移动端及 web 端测试工具及测试框架，如 Cypress, Appium 等
+    - 熟悉 linux，iOS，Android 等操作系统，了解docker技术优先
+    - 较强的责任心和自主学习能力
+    - 工作地点：上海
+  bonuses:
+    - 了解 Docker 并有实际使用经验
+  responsibilities:
+    - 负责 Web、移动端自动化测试框架搭建，用例编写，构建 CI 系统，提高测试效率
+    - 与 QA 团队其他成员和研发团队一起持续优化流程和工具，不断提高产品质量

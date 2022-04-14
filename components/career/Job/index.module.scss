@@ -1,0 +1,59 @@
+.job {
+  min-height: 17.75rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+
+  & > div {
+    flex-basis: 50%;
+    background: #fafafa;
+    padding: 1.5rem;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 157%;
+    color: #52575d;
+    border-radius: 0.5rem;
+
+    h2 {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      color: #000000;
+    }
+
+    ul {
+      padding-inline-start: 1.5rem;
+    }
+
+    li {
+      margin: 0.5em 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .job {
+    gap: 0.5rem;
+
+    & > div {
+      padding: 0.75rem;
+      font-size: 0.75rem;
+      line-height: 150%;
+
+      h2 {
+        font-size: 0.875rem;
+        line-height: 143%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .job {
+    flex-direction: column;
+
+    div {
+      width: 100%;
+    }
+  }
+}
