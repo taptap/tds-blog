@@ -1,0 +1,114 @@
+@import "../../../styles/common.scss";
+
+.BenefitsSection {
+  background: #eff1f2;
+  width: 100%;
+}
+
+.contents {
+  padding: 6.5rem 0;
+
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 117%;
+    margin: 0;
+    color: #1d2127;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-flow: row;
+  margin-top: 4.5rem;
+  gap: 1.5rem;
+}
+
+.card {
+  flex-basis: 50%;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+
+  h2 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 133%;
+    color: #1d2127;
+    margin: 0;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 171%;
+    letter-spacing: 3.29004e-9px;
+    color: #15c5ce;
+    margin-top: 1.5rem;
+
+    span {
+      margin-right: 1.25rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .contents {
+    padding: 3rem 0;
+
+    h1 {
+      font-size: 1.75rem;
+      line-height: 129%;
+    }
+  }
+
+  .cards {
+    margin-top: 3rem;
+    gap: 0.5rem;
+  }
+
+  .card {
+    h2 {
+      font-size: 1.25rem;
+      line-height: 140%;
+    }
+
+    .items {
+      font-size: 0.75rem;
+      line-height: 150%;
+      margin-top: 0.5rem;
+
+      span {
+        margin-right: 1.25rem;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contents {
+    padding: 3rem 0;
+  }
+
+  .cards {
+    flex-flow: column;
+    margin-top: 3rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0.75rem;
+
+    h2 {
+      font-weight: normal;
+      font-size: 1.25rem;
+      line-height: 140%;
+    }
+  }
+}

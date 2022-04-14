@@ -1,0 +1,305 @@
+.productsSection {
+  width: 100%;
+  height: 40rem;
+  color: #ffffff;
+  position: relative;
+}
+
+.tapBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(102.44deg, #5bd7dd 28.08%, #15c5ce 93.38%);
+}
+
+.tdsBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(77.13deg, #9cd0f5 4.68%, #5ca1e0 90.65%);
+  opacity: 0;
+}
+
+.contents {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin-top: 6.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+.lowerContainerTDS {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 7.8rem;
+  position: relative;
+}
+
+.taptapUI {
+  position: absolute;
+  width: 29.125rem;
+  height: 25.25rem;
+  bottom: -6.8rem;
+}
+
+.sausagemanContainer {
+  background: #ffffff;
+  border-radius: 1.55rem;
+  margin-right: 4.75rem;
+  height: 15.4rem;
+  width: 32.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 31.299375rem;
+    height: 14.455rem;
+  }
+}
+
+.productsText {
+  width: 31rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+  position: relative;
+}
+
+.taptapTab,
+.tdsTab {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+
+  .taptapLogo {
+    height: 1.05em;
+    position: relative;
+    top: 0.25em;
+  }
+}
+
+.taptapTab {
+  opacity: 100%;
+}
+
+.tdsTab {
+  opacity: 50%;
+  margin-left: 2.5rem;
+}
+
+.rail {
+  position: absolute;
+  top: 2.6rem;
+  left: 1.4rem;
+  width: 14rem;
+}
+
+.slider {
+  background: #ffffff;
+  border-radius: 0.25rem;
+  width: 2.5rem;
+  height: 0.25rem;
+}
+
+.tabContents {
+  position: relative;
+  margin-top: 2.8rem;
+
+  div {
+    position: absolute;
+    top: 0;
+
+    p {
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 150%;
+      color: #ffffff;
+      width: 28.125rem;
+    }
+
+    .taptapText {
+      opacity: 1;
+    }
+
+    .tdsText {
+      opacity: 0;
+    }
+  }
+}
+
+.learnMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #232525;
+  height: 2.5rem;
+  width: 6.5rem;
+  margin-top: 5.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 3.5rem;
+}
+
+@media only screen and (max-width: 1280px) {
+  .productsSection {
+    height: 26.25rem;
+  }
+
+  .contents {
+    h1 {
+      margin-top: 3rem;
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  .lowerContainerTDS {
+    margin-top: 5.6rem;
+  }
+
+  .taptapUI {
+    width: 19.125rem;
+    height: 16.625rem;
+    bottom: -5.2975rem;
+  }
+
+  .sausagemanContainer {
+    height: 10.10125rem;
+    width: 21.16375rem;
+    border-radius: 1.011875rem;
+
+    img {
+      width: 20.54rem;
+      height: 9.48625rem;
+      border-radius: 0.80946875rem;
+    }
+  }
+
+  .productsText {
+    width: 18rem;
+  }
+
+  .tabs {
+    height: 1.25rem;
+  }
+
+  .taptapTab,
+  .tdsTab {
+    font-size: 0.875rem;
+    line-height: 143%;
+  }
+
+  .rail {
+    position: absolute;
+    top: 1.66rem;
+    left: 0.85rem;
+    width: 9.5rem;
+  }
+
+  .slider {
+    width: 1.625rem;
+    height: 0.1875rem;
+  }
+
+  .tabContents {
+    margin-top: 1.95rem;
+
+    div p {
+      font-size: 0.75rem;
+      line-height: 150%;
+      width: 21.25rem;
+    }
+  }
+
+  .learnMore {
+    margin-top: 3.65rem;
+    font-size: 0.75rem;
+    width: 5rem;
+    height: 1.625rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .productsSection {
+    height: 32.5rem;
+  }
+
+  .lowerContainerTDS {
+    flex-direction: column-reverse;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+    height: 27.25rem;
+    justify-content: flex-end;
+
+    .image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .taptapUI {
+    bottom: 0;
+    width: 16rem;
+    height: 13.3125rem;
+  }
+
+  .sausagemanContainer {
+    margin-top: 2.496875rem;
+    margin-right: 0;
+  }
+
+  .productsText {
+    width: 100%;
+    align-items: center;
+    margin-top: 1.875rem;
+  }
+
+  .tabs {
+    justify-content: center;
+  }
+
+  .tabContents {
+    width: 100%;
+
+    p {
+      width: 100%;
+      padding: 0 1.5rem;
+    }
+  }
+
+  .learnMore {
+    margin-top: 4.375rem;
+  }
+}
