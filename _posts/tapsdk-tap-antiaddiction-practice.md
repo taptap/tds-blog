@@ -43,7 +43,8 @@ AntiAddictionUIKit.Init(gameIdentifier, useTimeLimit, usePaymentLimit, showSwitc
         }
         if (code == 1095)
         {
-            // 该回调状态不需要游戏做额外的处理
+            // 该回调状态需要游戏启用时长限制功能即 bool useTimeLimit = true; 
+            // 此外，开始游戏时调用 AntiAddictionUIKit.EnterGame(); 接口，停止游戏时调用 AntiAddictionUIKit.LeaveGame(); 接口
             // 说明玩家是未成年，该未成年玩家此时是可以允许进行游戏的，需要额外说明，这种状态开发者不需要关注，也不要做什么逻辑上的处理。
             // 该玩家如果持续游戏时间达到当天上限，SDK 内部会做处理，给出弹窗，玩家只能选择退出游戏
         }
