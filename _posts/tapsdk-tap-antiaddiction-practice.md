@@ -16,6 +16,7 @@ author: "shouwang"
 初始化 SDK：
 
 ```csharp
+// 这部分代码只是初始化 SDK 并注册监听回调，认证的结果根据回调方法中 code 字段给出。需要说明的是：触发回调需要调用认证接口才行。
 string gameIdentifier = "游戏的 Client ID";
 // 是否启用时长限制功能
 bool useTimeLimit = true;
@@ -71,7 +72,7 @@ AntiAddictionUIKit.Init(gameIdentifier, useTimeLimit, usePaymentLimit, showSwitc
 );
 ```
 
-逻辑上是先进行 SDK 初始化，然后调用实名认证接口触发 TDS 的实名认证功能。
+逻辑上是先进行 SDK 初始化，然后调用以下的实名认证接口完成 TDS 的实名认证功能。
 
 TDS 的实名认证有两种方式：
 
