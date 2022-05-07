@@ -41,23 +41,23 @@
     - 负责 Unreal Engine SDK 的开发和维护
     - 参与相关的产品决策
 
-- title: 资深 SRE 工程师/负责人
-  slug: ops-engineer
-  requirements:
-    - 有丰富的复杂线上系统的运维经验，有较强的问题分析排查能力
-    - 善于使用合适的语言和工具对流程进行自动化
-    - 深入了解 Linux 的配置调整、性能调优，熟悉其网络协议栈
-    - 熟悉容器技术、有容器编排系统使用经验，了解容器组网技术
-    - 有 Kubernetes、MongoDB、ELK、Hadoop(CDH)、Nginx 等系统的部署和维护经验
-    - 工作地点：上海/北京
-  bonuses:
-    - 开发过基于 Openresty 的富逻辑负载均衡组件
-    - 熟悉 Kubernetes 的部署及其网络配置，进行过相关的二次开发
-  responsibilities:
-    - 在运维和研发团队中推进 SRE、DevOps 方面的最佳实践
-    - 响应线上事故，参与 on-call 轮值
-    - 改进运维、监控体系，提高自动化程度
-    - 改进业务和基础设施的可控性，包括可用性、安全性、成本和可维护性
+# - title: 资深 SRE 工程师/负责人
+#   slug: ops-engineer
+#   requirements:
+#     - 有丰富的复杂线上系统的运维经验，有较强的问题分析排查能力
+#     - 善于使用合适的语言和工具对流程进行自动化
+#     - 深入了解 Linux 的配置调整、性能调优，熟悉其网络协议栈
+#     - 熟悉容器技术、有容器编排系统使用经验，了解容器组网技术
+#     - 有 Kubernetes、MongoDB、ELK、Hadoop(CDH)、Nginx 等系统的部署和维护经验
+#     - 工作地点：上海/北京
+#   bonuses:
+#     - 开发过基于 Openresty 的富逻辑负载均衡组件
+#     - 熟悉 Kubernetes 的部署及其网络配置，进行过相关的二次开发
+#   responsibilities:
+#     - 在运维和研发团队中推进 SRE、DevOps 方面的最佳实践
+#     - 响应线上事故，参与 on-call 轮值
+#     - 改进运维、监控体系，提高自动化程度
+#     - 改进业务和基础设施的可控性，包括可用性、安全性、成本和可维护性
 
 - title: 技术支持工程师
   slug: tech-support
