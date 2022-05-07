@@ -91,3 +91,19 @@
   responsibilities:
     - 负责 Web、移动端自动化测试框架搭建，用例编写，构建 CI 系统，提高测试效率
     - 与 QA 团队其他成员和研发团队一起持续优化流程和工具，不断提高产品质量
+
+- title: 后端工程师（运营技术支撑部）
+  slug: backend-engineer
+  requirements:
+    - 有扎实的软件开发基础，3-5年开发经验
+    - 熟练掌握 Go 或 PHP 其中至少一门语言
+    - 熟练掌握 MySQL，有数据库优化经验优先
+    - 熟悉常用的 Redis，MongoDB，Memcache 等开源中间件；
+    - 有良好的表达能力，和团队协作能力；
+    - 熟悉 Linux 系统
+    - 熟练运用 Git 等代码版本管理工具。
+  bonuses:
+    - 熟悉 CI/CD 工具，有自动化测试经验
+  responsibilities:
+    - 负责项目 API 服务及管理后台的设计、开发、测试、维护
+    - 进行相关产品的技术文档编写、技术方案设计
