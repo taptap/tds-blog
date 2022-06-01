@@ -9,6 +9,6 @@ author: Liu Chong
 
 由于各厂商对送达、点击的支持方式不同，华为和魅族需要进行相应配置才能开启，具体方法可以参考 [推送消息回调厂商通道配置指南](https://developer.taptap.com/docs/sdk/push/guide/callback-vendor/)，完成后在推送控制台里面填入相应配置。其他厂商默认就是开启的。
 
-得益于 TapDB 的强大功能，推送的统计结果可以很方便的在 TapDB 控制台进行分析，我们也对相关使用方式进行了说明，请参考[推送消息效果统计 TapDB 使用指引](https://developer.taptap.com/docs/sdk/push/guide/statistics_tapdb/)。
+得益于 TapDB 的强大功能，推送的统计结果可以很方便地在 TapDB 控制台进行分析，我们也对相关使用方式进行了说明，请参考[推送消息效果统计 TapDB 使用指引](https://developer.taptap.com/docs/sdk/push/guide/statistics_tapdb/)。
 
 若您有任何疑问或咨询，欢迎前往 **「开发者中心—工单」** 联系我们！
