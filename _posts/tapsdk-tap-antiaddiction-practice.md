@@ -7,7 +7,7 @@ author: "shouwang"
 
 按照国家新闻出版署[《关于进一步严格管理切实防止未成年人沉迷网络游戏的通知》](https://www.nppa.gov.cn/nppa/contents/279/98792.shtml)，各游戏出版运营企业均须在游戏内落实游戏实名认证和防沉迷新策略。依此 TDS 推出「防沉迷」功能，助力游戏厂商发展。
 
-在使用 TDS 实名认证和防沉迷服务之前，游戏厂商需要完成一些前期准备工作。详情请参考[「注册中宣部实名认证系统」](https://developer.taptap.com/docs/sdk/anti-addiction/features/#%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%AE%A3%E9%83%A8%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F)。**注意：没有版号的游戏想要使用 TDS 的防沉迷功能，需要在 TapTap 开发者中心后台提交工单进行申请，工单分类选择「游戏服务支持 > 防沉迷新政相关」。无版号游戏没有开通实名认证防沉迷服务是无法使用 TDS 的实名认证防沉迷功能的。**
+在使用 TDS 实名认证和防沉迷服务之前，游戏厂商需要完成一些前期准备工作。在 [TapTap 开发者中心](https://developer.taptap.com) 创建游戏、开通游戏服务后，找到 **游戏服务 > 生态服务 > 合规认证** 根据游戏的情况在两种方案中选择一种，为游戏开通实名认证与防沉迷服务。
 
 接下来将介绍该如何接入 TDS 推出的「实名认证和防沉迷」功能：
 
@@ -78,7 +78,13 @@ TDS 的实名认证有两种方式：
 
 - TapTap 快速认证
 
-TapTap 快速认证服务顾名思义，是通过玩家在 Tap 社区客户端已经拥有的账号登录，而且该账号是已经通过 TapTap 客户端实名过的。**这种方式的前提是游戏需要接入 [TapTap 登录](https://developer.taptap.com/docs/sdk/taptap-login/features/)功能**，游戏可以选择通过基于[内建账户系统](https://developer.taptap.com/docs/sdk/authentication/features/)接入 TapTap 登录，或者以[单纯 TapTap 用户认证](https://developer.taptap.com/docs/sdk/taptap-login/guide/tap-login/)的方式接入 TapTap 登录。登录成功后需要将 TapSDK 返回的玩家属性用户唯一标识作为参数传递给防沉迷的接口，从而才可以开始 TapTap 快速认证。具体的代码示范如下：
+TapTap 快速认证服务顾名思义，是通过玩家在 Tap 社区客户端已经拥有的账号登录，而且该账号是已经通过 TapTap 客户端实名过的。
+
+**防沉迷 v3.7.1 之前**，这种方式的前提是游戏需要接入 [TapTap 登录](https://developer.taptap.com/docs/sdk/taptap-login/features/)功能，游戏可以选择通过基于[内建账户系统](https://developer.taptap.com/docs/sdk/authentication/features/)接入 TapTap 登录，或者以[单纯 TapTap 用户认证](https://developer.taptap.com/docs/sdk/taptap-login/guide/tap-login/)的方式接入 TapTap 登录。登录成功后需要将 TapSDK 返回的玩家属性用户唯一标识作为参数传递给防沉迷的接口，从而才可以开始 TapTap 快速认证。
+
+**防沉迷 v3.7.1 及之后版本，使用快速认证不再依赖 TapTap 登录 SDK**。只需要开通 TapTap 登录功能、后台配置好签名证书。
+
+具体的代码示范如下：
 
 ```csharp
 bool isUseTapLogin = true;
